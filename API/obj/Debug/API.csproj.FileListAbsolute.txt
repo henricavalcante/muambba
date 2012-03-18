@@ -1,0 +1,13 @@
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\API.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\API.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\BLL.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\Modelo.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\Repositorio.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\Util.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\BLL.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\Modelo.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\Repositorio.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\bin\Util.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\obj\Debug\API.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\API\obj\Debug\API.pdb

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\muambba\muambba\hm.henrimichel.SITE\pub\01" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="henrimichel" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="js/_class.noobSlide.packed.js" publishTime="08/25/2010 13:17:38" />
+    <file relUrl="bin/hm.framework.pdb" publishTime="09/16/2010 22:15:51" />
+    <file relUrl="img/slider_btn.png" publishTime="08/25/2010 13:04:50" />
+    <file relUrl="js/jquery.mousewheel.js" publishTime="09/16/2010 23:33:27" />
+    <file relUrl="bin/Mono.Security.dll" publishTime="07/07/2007 00:09:48" />
+    <file relUrl="bin/hm.framework.xml" publishTime="09/16/2010 22:15:51" />
+    <file relUrl="img/logotopo.png" publishTime="09/16/2010 14:07:09" />
+    <file relUrl="css/StyleSheet.css" publishTime="09/19/2010 11:24:54" />
+    <file relUrl="bin/fr/Npgsql.resources.dll" publishTime="08/01/2010 15:46:32" />
+    <file relUrl="img/slider_images/img2.jpg" publishTime="09/19/2010 11:27:19" />
+    <file relUrl="bin/Npgsql.pdb" publishTime="08/01/2010 15:46:30" />
+    <file relUrl="bin/hm.framework.dll" publishTime="09/16/2010 22:15:51" />
+    <file relUrl="bin/zh-CN/Npgsql.resources.dll" publishTime="08/01/2010 15:46:30" />
+    <file relUrl="img/logofooter.png" publishTime="09/16/2010 14:08:11" />
+    <file relUrl="bin/hm.henrimichel.SITE.pdb" publishTime="09/19/2010 11:53:31" />
+    <file relUrl="img/comp_screen.png" publishTime="08/25/2010 13:07:00" />
+    <file relUrl="js/mootools-1.2-core.js" publishTime="08/25/2010 13:17:14" />
+    <file relUrl="bin/ja/Npgsql.resources.dll" publishTime="08/01/2010 15:46:30" />
+    <file relUrl="Default.aspx" publishTime="09/19/2010 11:24:15" />
+    <file relUrl="img/slider_images/img1.jpg" publishTime="09/19/2010 11:16:26" />
+    <file relUrl="css/jScrollPane.css" publishTime="09/17/2010 00:12:33" />
+    <file relUrl="js/cufon-yui.js" publishTime="09/15/2010 00:17:53" />
+    <file relUrl="bin/de/Npgsql.resources.dll" publishTime="08/01/2010 15:46:30" />
+    <file relUrl="bin/Npgsql.dll" publishTime="08/01/2010 15:46:30" />
+    <file relUrl="bin/es/Npgsql.resources.dll" publishTime="08/01/2010 15:46:32" />
+    <file relUrl="img/central01.png" publishTime="09/16/2010 14:05:53" />
+    <file relUrl="Web.config" publishTime="09/14/2010 22:36:46" />
+    <file relUrl="bin/fi/Npgsql.resources.dll" publishTime="08/01/2010 15:46:32" />
+    <file relUrl="bin/hm.henrimichel.SITE.xml" publishTime="09/19/2010 11:53:31" />
+    <file relUrl="js/jScrollPane.js" publishTime="09/16/2010 23:33:47" />
+    <file relUrl="bin/Npgsql.xml" publishTime="08/01/2010 15:46:30" />
+    <file relUrl="bin/hm.henrimichel.SITE.dll" publishTime="09/19/2010 11:53:31" />
+    <file relUrl="js/Bring_tha_noize_400.font.js" publishTime="09/03/2010 00:09:51" />
+  </publishProfile>
+</publishData>

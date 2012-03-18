@@ -1,0 +1,83 @@
+a.jScrollArrowLeft {
+	background: url(basic_arrow_up.gif) repeat-x 0 0;
+}
+a.jScrollArrowLeft:hover {
+	background-position: 0 -15px;
+}
+a.jScrollArrowRight {
+	background: url(basic_arrow_down.gif) repeat-x 0 0;
+}
+a.jScrollArrowRight:hover {
+	background-position: 0 -15px;
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+	background-position: 0 -30px;
+}
+
+
+
+.jScrollPaneHContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	outline:none;
+}
+
+.jScrollPaneHTrack {
+	position: absolute;
+	cursor: pointer;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color:transparent;
+}
+.jScrollPaneHDrag {
+	position: absolute;
+	background: #666;
+	cursor: pointer;
+	overflow: hidden;
+}
+.jScrollPaneHDragLeft {
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.jScrollPaneHDragRight {
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+}
+a.jScrollArrowLeft {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	width: 9px;
+}
+a.jScrollArrowLeft:hover {
+	/*background-color: #f60;*/
+}
+
+a.jScrollArrowRight {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	text-indent: -2000px;
+	overflow: hidden;
+	/*background-color: #666;*/
+	width: 9px;
+}
+a.jScrollArrowRight:hover {
+	/*background-color: #f60;*/
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+	/*background-color: #f00;*/
+}

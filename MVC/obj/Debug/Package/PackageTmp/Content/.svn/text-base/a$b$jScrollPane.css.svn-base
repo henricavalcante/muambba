@@ -1,0 +1,67 @@
+
+.jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: inline-block;
+}
+
+.jScrollPaneTrack {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+.jScrollPaneDrag {
+	position: absolute;
+	background: #666;
+	cursor: pointer;
+	overflow: hidden;
+}
+.jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.jScrollPaneHContainer {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	outline:none;
+}
+
+.jScrollPaneHTrack {
+	position: absolute;
+	cursor: pointer;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color:transparent;
+}
+.jScrollPaneHDrag {
+	position: absolute;
+	background: #666;
+	cursor: pointer;
+	overflow: hidden;
+}
+.jScrollPaneHDragLeft {
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.jScrollPaneHDragRight {
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+}

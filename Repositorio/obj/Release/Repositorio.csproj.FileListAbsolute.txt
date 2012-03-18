@@ -1,0 +1,7 @@
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\bin\Release\Repositorio.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\bin\Release\Repositorio.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\bin\Release\Modelo.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\bin\Release\Modelo.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\obj\Release\ResolveAssemblyReference.cache
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\obj\Release\Repositorio.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Repositorio\obj\Release\Repositorio.pdb

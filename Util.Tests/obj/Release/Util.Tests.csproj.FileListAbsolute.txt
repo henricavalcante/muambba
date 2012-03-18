@@ -1,0 +1,7 @@
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\bin\Release\Util.Tests.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\bin\Release\Util.Tests.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\bin\Release\Util.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\bin\Release\Util.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\obj\Release\ResolveAssemblyReference.cache
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\obj\Release\Util.Tests.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\obj\Release\Util.Tests.pdb

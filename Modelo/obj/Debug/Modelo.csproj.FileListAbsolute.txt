@@ -1,0 +1,6 @@
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Modelo\bin\Debug\Modelo.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Modelo\bin\Debug\Modelo.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Modelo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Modelo\obj\Debug\Modelo.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Modelo\obj\Debug\Modelo.pdb

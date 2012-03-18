@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8f7974b2-0fc6-4fc1-99dd-2182d82e419e" name="henri@HENRI-PC 2011-12-03 19:10:48" runUser="henri-PC\henri" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1ef885aa-afdd-4cc4-b80a-eb99ff25c69f">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="henri_HENRI-PC 2011-12-03 19_10_48">
+      <DeploymentItem filename="C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util\bin\Debug\Util.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-12-03T19:10:48.3772921-03:00" queuing="2011-12-03T19:10:48.4792979-03:00" start="2011-12-03T19:10:48.6523078-03:00" finish="2011-12-03T19:10:50.1293923-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Validando_o_validador_de_CPF" storage="c:\users\henri\desktop\projetos svn local\muambba\util.tests\bin\debug\util.tests.dll" id="50f45cc2-0bf8-a008-9f07-dc33a36a59da">
+      <Execution id="8af851a0-91bc-43b3-8777-e720f093c1fa" />
+      <TestMethod codeBase="C:/Users/henri/Desktop/Projetos SVN LOCAL/muambba/Util.Tests/bin/Debug/Util.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Util.Tests.UnitTest1, Util.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Validando_o_validador_de_CPF" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="50f45cc2-0bf8-a008-9f07-dc33a36a59da" executionId="8af851a0-91bc-43b3-8777-e720f093c1fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8af851a0-91bc-43b3-8777-e720f093c1fa" testId="50f45cc2-0bf8-a008-9f07-dc33a36a59da" testName="Validando_o_validador_de_CPF" computerName="HENRI-PC" duration="00:00:00.1125356" startTime="2011-12-03T19:10:48.8283179-03:00" endTime="2011-12-03T19:10:49.9333811-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8af851a0-91bc-43b3-8777-e720f093c1fa">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;True&gt;. Actual:&lt;False&gt;. CPF Inválido</Message>
+          <StackTrace>   at Util.Tests.UnitTest1.Validando_o_validador_de_CPF() in C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\Util.Tests\UnitTest1.cs:line 71
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

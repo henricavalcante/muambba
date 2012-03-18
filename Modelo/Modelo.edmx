@@ -1,0 +1,2485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="muambbasqlModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="muambbasqlModelStoreContainer">
+          <EntitySet Name="Anuncio" EntityType="muambbasqlModel.Store.Anuncio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AnuncioFoto" EntityType="muambbasqlModel.Store.AnuncioFoto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AnuncioOferta" EntityType="muambbasqlModel.Store.AnuncioOferta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AnuncioOfertaAnuncio" EntityType="muambbasqlModel.Store.AnuncioOfertaAnuncio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AnuncioPergunta" EntityType="muambbasqlModel.Store.AnuncioPergunta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Busca" EntityType="muambbasqlModel.Store.Busca" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Categoria" EntityType="muambbasqlModel.Store.Categoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CategoriaTipo" EntityType="muambbasqlModel.Store.CategoriaTipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Denuncia" EntityType="muambbasqlModel.Store.Denuncia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmailMarketing" EntityType="muambbasqlModel.Store.EmailMarketing" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Endereco" EntityType="muambbasqlModel.Store.Endereco" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EnderecoBairro" EntityType="muambbasqlModel.Store.EnderecoBairro" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EnderecoCep" EntityType="muambbasqlModel.Store.EnderecoCep" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EnderecoCidade" EntityType="muambbasqlModel.Store.EnderecoCidade" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EnderecoEstado" EntityType="muambbasqlModel.Store.EnderecoEstado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EnderecoLogradouroTipo" EntityType="muambbasqlModel.Store.EnderecoLogradouroTipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fidelidade" EntityType="muambbasqlModel.Store.Fidelidade" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sessao" EntityType="muambbasqlModel.Store.Sessao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sugestao" EntityType="muambbasqlModel.Store.Sugestao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="muambbasqlModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="muambbasqlModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioAnuncioFavorito" EntityType="muambbasqlModel.Store.UsuarioAnuncioFavorito" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioContato" EntityType="muambbasqlModel.Store.UsuarioContato" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioContatoTipo" EntityType="muambbasqlModel.Store.UsuarioContatoTipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioFoto" EntityType="muambbasqlModel.Store.UsuarioFoto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vwTagCloud" EntityType="muambbasqlModel.Store.vwTagCloud" store:Type="Views" store:Schema="dbo" store:Name="vwTagCloud">
+            <DefiningQuery>SELECT 
+      [vwTagCloud].[Quantidade] AS [Quantidade], 
+      [vwTagCloud].[Busca] AS [Busca]
+      FROM [dbo].[vwTagCloud] AS [vwTagCloud]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="EnderecoCep_fk" Association="muambbasqlModel.Store.EnderecoCep_fk">
+            <End Role="EnderecoLogradouroTipo" EntitySet="EnderecoLogradouroTipo" />
+            <End Role="EnderecoCep" EntitySet="EnderecoCep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_Categoria" Association="muambbasqlModel.Store.FK_Anuncio_Categoria">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_Usuario" Association="muambbasqlModel.Store.FK_Anuncio_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_Usuario1" Association="muambbasqlModel.Store.FK_Anuncio_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioFoto_Anuncio" Association="muambbasqlModel.Store.FK_AnuncioFoto_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioFoto" EntitySet="AnuncioFoto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOferta_Anuncio" Association="muambbasqlModel.Store.FK_AnuncioOferta_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioOferta" EntitySet="AnuncioOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOferta_Usuario" Association="muambbasqlModel.Store.FK_AnuncioOferta_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="AnuncioOferta" EntitySet="AnuncioOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOfertaAnuncio_Anuncio" Association="muambbasqlModel.Store.FK_AnuncioOfertaAnuncio_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioOfertaAnuncio" EntitySet="AnuncioOfertaAnuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOfertaAnuncio_AnuncioOferta" Association="muambbasqlModel.Store.FK_AnuncioOfertaAnuncio_AnuncioOferta">
+            <End Role="AnuncioOferta" EntitySet="AnuncioOferta" />
+            <End Role="AnuncioOfertaAnuncio" EntitySet="AnuncioOfertaAnuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_Anuncio" Association="muambbasqlModel.Store.FK_AnuncioPergunta_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_AnuncioPergunta" Association="muambbasqlModel.Store.FK_AnuncioPergunta_AnuncioPergunta">
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+            <End Role="AnuncioPergunta1" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_Usuario" Association="muambbasqlModel.Store.FK_AnuncioPergunta_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_Usuario1" Association="muambbasqlModel.Store.FK_AnuncioPergunta_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Busca_Usuario" Association="muambbasqlModel.Store.FK_Busca_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Busca" EntitySet="Busca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categoria_Categoria" Association="muambbasqlModel.Store.FK_Categoria_Categoria">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Categoria1" EntitySet="Categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categoria_CategoriaTipo" Association="muambbasqlModel.Store.FK_Categoria_CategoriaTipo">
+            <End Role="CategoriaTipo" EntitySet="CategoriaTipo" />
+            <End Role="Categoria" EntitySet="Categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Denuncia_Usuario" Association="muambbasqlModel.Store.FK_Denuncia_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Denuncia" EntitySet="Denuncia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Endereco_EnderecoCep" Association="muambbasqlModel.Store.FK_Endereco_EnderecoCep">
+            <End Role="EnderecoCep" EntitySet="EnderecoCep" />
+            <End Role="Endereco" EntitySet="Endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoBairro_EnderecoCidade" Association="muambbasqlModel.Store.FK_EnderecoBairro_EnderecoCidade">
+            <End Role="EnderecoCidade" EntitySet="EnderecoCidade" />
+            <End Role="EnderecoBairro" EntitySet="EnderecoBairro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoCep_EnderecoBairro" Association="muambbasqlModel.Store.FK_EnderecoCep_EnderecoBairro">
+            <End Role="EnderecoBairro" EntitySet="EnderecoBairro" />
+            <End Role="EnderecoCep" EntitySet="EnderecoCep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoCidade_EnderecoEstado" Association="muambbasqlModel.Store.FK_EnderecoCidade_EnderecoEstado">
+            <End Role="EnderecoEstado" EntitySet="EnderecoEstado" />
+            <End Role="EnderecoCidade" EntitySet="EnderecoCidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessoes_Usuario" Association="muambbasqlModel.Store.FK_Sessoes_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Sessao" EntitySet="Sessao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sugestao_Usuario" Association="muambbasqlModel.Store.FK_Sugestao_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Sugestao" EntitySet="Sugestao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Endereco" Association="muambbasqlModel.Store.FK_Usuario_Endereco">
+            <End Role="Endereco" EntitySet="Endereco" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Usuario" Association="muambbasqlModel.Store.FK_Usuario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Usuario1" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Usuario1" Association="muambbasqlModel.Store.FK_Usuario_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Usuario1" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Usuario3" Association="muambbasqlModel.Store.FK_Usuario_Usuario3">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Usuario1" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioAnuncioFavorito_Anuncio" Association="muambbasqlModel.Store.FK_UsuarioAnuncioFavorito_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="UsuarioAnuncioFavorito" EntitySet="UsuarioAnuncioFavorito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioAnuncioFavorito_Usuario" Association="muambbasqlModel.Store.FK_UsuarioAnuncioFavorito_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioAnuncioFavorito" EntitySet="UsuarioAnuncioFavorito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioContato_Usuario" Association="muambbasqlModel.Store.FK_UsuarioContato_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioContato" EntitySet="UsuarioContato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioContato_UsuarioContatoTipo" Association="muambbasqlModel.Store.FK_UsuarioContato_UsuarioContatoTipo">
+            <End Role="UsuarioContatoTipo" EntitySet="UsuarioContatoTipo" />
+            <End Role="UsuarioContato" EntitySet="UsuarioContato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioFoto_Usuario" Association="muambbasqlModel.Store.FK_UsuarioFoto_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioFoto" EntitySet="UsuarioFoto" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Anuncio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SubTitulo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Descricao" Type="ntext" Nullable="false" />
+          <Property Name="Preco" Type="money" />
+          <Property Name="AnuncioConservacao_ID" Type="int" Nullable="false" />
+          <Property Name="AnuncioTipo_ID" Type="int" Nullable="false" />
+          <Property Name="Categoria_ID" Type="int" Nullable="false" />
+          <Property Name="DataExp" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioInc_ID" Type="int" Nullable="false" />
+          <Property Name="UsuarioUpd_ID" Type="int" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+          <Property Name="DataUpd" Type="datetime" />
+          <Property Name="Visitas" Type="int" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="NomeArquivoFotoPrincipal" Type="varchar" MaxLength="255" />
+          <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Ofertas" Type="int" Nullable="false" />
+          <Property Name="UsuarioExc_ID" Type="int" />
+          <Property Name="_Tamanho" Type="varchar" MaxLength="20" />
+          <Property Name="_Cor" Type="varchar" MaxLength="100" />
+          <Property Name="_Garantia" Type="varchar" MaxLength="50" />
+          <Property Name="_Disponibilidade" Type="smallint" />
+          <Property Name="_Quantidade" Type="smallint" />
+          <Property Name="_Localizacao_Latitude" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="_Localizacao_Longitude" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="_Veiculo_Cor_ID" Type="int" />
+          <Property Name="_Veiculo_Ano_Fabricacao" Type="int" />
+          <Property Name="_Veiculo_Ano_Modelo" Type="int" />
+          <Property Name="_Veiculo_Combustivel_ID" Type="int" />
+          <Property Name="_Veiculo_Km" Type="int" />
+          <Property Name="_Veiculo_Acessorios" Type="varchar" MaxLength="1000" />
+          <Property Name="_Imovel_Quartos" Type="tinyint" />
+          <Property Name="_Imovel_Suites" Type="tinyint" />
+          <Property Name="_Imovel_Vagas_Garagem" Type="tinyint" />
+          <Property Name="_Imovel_Idade" Type="smallint" />
+          <Property Name="_Imovel_IPTU" Type="money" />
+          <Property Name="_Imovel_Area_Terreno" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="_Imovel_Area_Util" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="_Imovel_Condominio_Valor" Type="money" />
+          <Property Name="_Imovel_Condominio_Andar" Type="tinyint" />
+          <Property Name="_Imovel_Condominio_Andares" Type="tinyint" />
+          <Property Name="_Imovel_Condominio_Unidades_Por_Andar" Type="tinyint" />
+          <Property Name="_Imovel_Condominio_Administradora" Type="varchar" MaxLength="255" />
+          <Property Name="_Imovel_Condominio_Nome" Type="varchar" MaxLength="100" />
+          <Property Name="_Imovel_Condominio_Infraestrutura" Type="varchar" MaxLength="1000" />
+          <Property Name="_Imovel_Instalacoes" Type="varchar" MaxLength="1000" />
+          <Property Name="_Imovel_Lazer" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="AnuncioFoto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Anuncio_ID" Type="int" Nullable="false" />
+          <Property Name="NomeArquivo" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnuncioOferta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Anuncio_ID" Type="int" Nullable="false" />
+          <Property Name="OfertaDescricao" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="OfertaValor" Type="money" />
+          <Property Name="AnuncioOfertaStatus_ID" Type="int" Nullable="false" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioInc_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnuncioOfertaAnuncio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AnuncioOferta_ID" Type="int" Nullable="false" />
+          <Property Name="Anuncio_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnuncioPergunta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdAnuncio" Type="int" Nullable="false" />
+          <Property Name="IdAnuncioPerguntaFK" Type="int" />
+          <Property Name="Pergunta" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="Resposta" Type="varchar" MaxLength="4000" />
+          <Property Name="IdUsuarioInc" Type="int" Nullable="false" />
+          <Property Name="IdUsuarioUpd" Type="int" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+          <Property Name="DataUpd" Type="datetime" />
+          <Property Name="RankResposta" Type="tinyint" />
+          <Property Name="Privada" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Busca">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Busca" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="UsuarioInc_ID" Type="int" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+          <Property Name="UrlAtual" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Categoria" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CategoriaFK_ID" Type="int" />
+          <Property Name="CategoriaTipo_ID" Type="int" Nullable="false" />
+          <Property Name="QuantidadeAnuncios" Type="int" Nullable="false" />
+          <Property Name="Anunciavel" Type="bit" Nullable="false" />
+          <Property Name="Link" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="usaTamanho" Type="bit" Nullable="false" />
+          <Property Name="usaCor" Type="bit" Nullable="false" />
+          <Property Name="usaGarantia" Type="bit" Nullable="false" />
+          <Property Name="usaDisponibilidade" Type="bit" Nullable="false" />
+          <Property Name="usaQuantidade" Type="bit" Nullable="false" />
+          <Property Name="usaLocalizacao" Type="bit" Nullable="false" />
+          <Property Name="usaVeiculo" Type="bit" Nullable="false" />
+          <Property Name="usaImovel" Type="bit" Nullable="false" />
+          <Property Name="usaImovel_Condominio" Type="bit" Nullable="false" />
+          <Property Name="usaImovel_Instalacoes" Type="bit" Nullable="false" />
+          <Property Name="usaImovel_Lazer" Type="bit" Nullable="false" />
+          <Property Name="usaImovel_Residencial" Type="bit" Nullable="false" />
+          <Property Name="usaImovel_Garagem" Type="bit" Nullable="false" />
+          <Property Name="CategoriasFilhas" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CategoriaTipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CategoriaTipo" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Denuncia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Denuncia" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="DenunciaTipo_ID" Type="int" Nullable="false" />
+          <Property Name="DenunciaObjeto_ID" Type="int" Nullable="false" />
+          <Property Name="DenunciaClasse_ID" Type="int" Nullable="false" />
+          <Property Name="UsuarioInc_ID" Type="int" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+          <Property Name="DenunciaStatus_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmailMarketing">
+          <Key>
+            <PropertyRef Name="IdEmailMarketing" />
+          </Key>
+          <Property Name="IdEmailMarketing" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmailMarketing" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="QuantidadeEnvios" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Endereco">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnderecoCep_ID" Type="int" Nullable="false" />
+          <Property Name="Complemento" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EnderecoBairro">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="EnderecoCidade_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EnderecoCep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EnderecoBairro_ID" Type="int" Nullable="false" />
+          <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="EnderecoLogradouroTipo_ID" Type="int" Nullable="false" />
+          <Property Name="Logradouro" Type="varchar" Nullable="false" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="EnderecoCidade">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="EnderecoEstado_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EnderecoEstado">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UF" Type="varchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="EnderecoLogradouroTipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Fidelidade">
+          <Key>
+            <PropertyRef Name="IdFidelidade" />
+          </Key>
+          <Property Name="IdFidelidade" Type="int" Nullable="false" />
+          <Property Name="Fidelidade" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Pontos" Type="int" Nullable="false" />
+          <Property Name="QuantidadeFotos" Type="int" Nullable="false" />
+          <Property Name="Shop" Type="bit" Nullable="false" />
+          <Property Name="Cor" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Sessao">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Usuario_ID" Type="int" />
+          <Property Name="DataHoraInicio" Type="datetime" Nullable="false" />
+          <Property Name="DataHoraFim" Type="datetime" Nullable="false" />
+          <Property Name="Checkpoints" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sugestao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sugestao" Type="ntext" Nullable="false" />
+          <Property Name="UsuarioInc_ID" Type="int" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sobrenome" Type="varchar" MaxLength="50" />
+          <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="CPF" Type="varchar" MaxLength="11" />
+          <Property Name="UsuarioInc_ID" Type="int" />
+          <Property Name="UsuarioUpd_ID" Type="int" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+          <Property Name="DataUpd" Type="datetime" />
+          <Property Name="Administrador" Type="bit" Nullable="false" />
+          <Property Name="Situacao" Type="tinyint" Nullable="false" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Endereco_ID" Type="int" />
+          <Property Name="QualificacaoPositiva" Type="int" Nullable="false" />
+          <Property Name="QualificacaoNegativa" Type="int" Nullable="false" />
+          <Property Name="QualificacaoNeutra" Type="int" Nullable="false" />
+          <Property Name="Linguagem" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="AnunciosPorPagina" Type="tinyint" Nullable="false" />
+          <Property Name="ManterConectado" Type="bit" Nullable="false" />
+          <Property Name="ReceberEmails" Type="bit" Nullable="false" />
+          <Property Name="UsuarioIndicou_ID" Type="int" />
+          <Property Name="NomeArquivoFotoPrincipal" Type="varchar" MaxLength="255" />
+          <Property Name="LoginQuantidadeTotalSucesso" Type="int" Nullable="false" />
+          <Property Name="LoginQuantidadeTotalFalha" Type="int" Nullable="false" />
+          <Property Name="LoginQuantidadeSucessivaSucesso" Type="int" Nullable="false" />
+          <Property Name="LoginQuantidadeSucessivaFalha" Type="int" Nullable="false" />
+          <Property Name="LoginUltimoSucesso" Type="datetime" />
+          <Property Name="LoginUltimoFalha" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UsuarioAnuncioFavorito">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="IdAnuncio" Type="int" Nullable="false" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuarioContato">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UsuarioContatoTipo_ID" Type="tinyint" Nullable="false" />
+          <Property Name="Usuario_ID" Type="int" Nullable="false" />
+          <Property Name="UsuarioContato" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Publico" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuarioContatoTipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UsuarioContatoTipo" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UsuarioFoto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario_ID" Type="int" Nullable="false" />
+          <Property Name="NomeArquivo" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="DataInc" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'muambbasql.dbo.vwTagCloud' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vwTagCloud">
+          <Key>
+            <PropertyRef Name="Busca" />
+          </Key>
+          <Property Name="Quantidade" Type="int" />
+          <Property Name="Busca" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <Association Name="EnderecoCep_fk">
+          <End Role="EnderecoLogradouroTipo" Type="muambbasqlModel.Store.EnderecoLogradouroTipo" Multiplicity="1" />
+          <End Role="EnderecoCep" Type="muambbasqlModel.Store.EnderecoCep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoLogradouroTipo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoCep">
+              <PropertyRef Name="EnderecoLogradouroTipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_Categoria">
+          <End Role="Categoria" Type="muambbasqlModel.Store.Categoria" Multiplicity="1" />
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Categoria_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="1" />
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_Usuario1">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="UsuarioUpd_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioFoto_Anuncio">
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="1" />
+          <End Role="AnuncioFoto" Type="muambbasqlModel.Store.AnuncioFoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioFoto">
+              <PropertyRef Name="Anuncio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOferta_Anuncio">
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="1" />
+          <End Role="AnuncioOferta" Type="muambbasqlModel.Store.AnuncioOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOferta">
+              <PropertyRef Name="Anuncio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOferta_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="1" />
+          <End Role="AnuncioOferta" Type="muambbasqlModel.Store.AnuncioOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOferta">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOfertaAnuncio_Anuncio">
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="1" />
+          <End Role="AnuncioOfertaAnuncio" Type="muambbasqlModel.Store.AnuncioOfertaAnuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOfertaAnuncio">
+              <PropertyRef Name="Anuncio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOfertaAnuncio_AnuncioOferta">
+          <End Role="AnuncioOferta" Type="muambbasqlModel.Store.AnuncioOferta" Multiplicity="1" />
+          <End Role="AnuncioOfertaAnuncio" Type="muambbasqlModel.Store.AnuncioOfertaAnuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnuncioOferta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOfertaAnuncio">
+              <PropertyRef Name="AnuncioOferta_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_Anuncio">
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="1" />
+          <End Role="AnuncioPergunta" Type="muambbasqlModel.Store.AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta">
+              <PropertyRef Name="IdAnuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_AnuncioPergunta">
+          <End Role="AnuncioPergunta" Type="muambbasqlModel.Store.AnuncioPergunta" Multiplicity="0..1" />
+          <End Role="AnuncioPergunta1" Type="muambbasqlModel.Store.AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnuncioPergunta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta1">
+              <PropertyRef Name="IdAnuncioPerguntaFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="1" />
+          <End Role="AnuncioPergunta" Type="muambbasqlModel.Store.AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta">
+              <PropertyRef Name="IdUsuarioInc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_Usuario1">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="AnuncioPergunta" Type="muambbasqlModel.Store.AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta">
+              <PropertyRef Name="IdUsuarioUpd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Busca_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Busca" Type="muambbasqlModel.Store.Busca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Busca">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categoria_Categoria">
+          <End Role="Categoria" Type="muambbasqlModel.Store.Categoria" Multiplicity="0..1" />
+          <End Role="Categoria1" Type="muambbasqlModel.Store.Categoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Categoria1">
+              <PropertyRef Name="CategoriaFK_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categoria_CategoriaTipo">
+          <End Role="CategoriaTipo" Type="muambbasqlModel.Store.CategoriaTipo" Multiplicity="1" />
+          <End Role="Categoria" Type="muambbasqlModel.Store.Categoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaTipo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Categoria">
+              <PropertyRef Name="CategoriaTipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Denuncia_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Denuncia" Type="muambbasqlModel.Store.Denuncia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Denuncia">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Endereco_EnderecoCep">
+          <End Role="EnderecoCep" Type="muambbasqlModel.Store.EnderecoCep" Multiplicity="1" />
+          <End Role="Endereco" Type="muambbasqlModel.Store.Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoCep">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Endereco">
+              <PropertyRef Name="EnderecoCep_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoBairro_EnderecoCidade">
+          <End Role="EnderecoCidade" Type="muambbasqlModel.Store.EnderecoCidade" Multiplicity="1" />
+          <End Role="EnderecoBairro" Type="muambbasqlModel.Store.EnderecoBairro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoCidade">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoBairro">
+              <PropertyRef Name="EnderecoCidade_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoCep_EnderecoBairro">
+          <End Role="EnderecoBairro" Type="muambbasqlModel.Store.EnderecoBairro" Multiplicity="1" />
+          <End Role="EnderecoCep" Type="muambbasqlModel.Store.EnderecoCep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoBairro">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoCep">
+              <PropertyRef Name="EnderecoBairro_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoCidade_EnderecoEstado">
+          <End Role="EnderecoEstado" Type="muambbasqlModel.Store.EnderecoEstado" Multiplicity="1" />
+          <End Role="EnderecoCidade" Type="muambbasqlModel.Store.EnderecoCidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoEstado">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoCidade">
+              <PropertyRef Name="EnderecoEstado_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessoes_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Sessao" Type="muambbasqlModel.Store.Sessao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessao">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sugestao_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Sugestao" Type="muambbasqlModel.Store.Sugestao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sugestao">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Endereco">
+          <End Role="Endereco" Type="muambbasqlModel.Store.Endereco" Multiplicity="0..1" />
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Endereco">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Endereco_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Usuario1" Type="muambbasqlModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario1">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Usuario1">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Usuario1" Type="muambbasqlModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario1">
+              <PropertyRef Name="UsuarioUpd_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Usuario3">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="0..1" />
+          <End Role="Usuario1" Type="muambbasqlModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario1">
+              <PropertyRef Name="UsuarioIndicou_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioAnuncioFavorito_Anuncio">
+          <End Role="Anuncio" Type="muambbasqlModel.Store.Anuncio" Multiplicity="1" />
+          <End Role="UsuarioAnuncioFavorito" Type="muambbasqlModel.Store.UsuarioAnuncioFavorito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioAnuncioFavorito">
+              <PropertyRef Name="IdAnuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioAnuncioFavorito_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="1" />
+          <End Role="UsuarioAnuncioFavorito" Type="muambbasqlModel.Store.UsuarioAnuncioFavorito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioAnuncioFavorito">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioContato_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="1" />
+          <End Role="UsuarioContato" Type="muambbasqlModel.Store.UsuarioContato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioContato">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioContato_UsuarioContatoTipo">
+          <End Role="UsuarioContatoTipo" Type="muambbasqlModel.Store.UsuarioContatoTipo" Multiplicity="1" />
+          <End Role="UsuarioContato" Type="muambbasqlModel.Store.UsuarioContato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioContatoTipo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioContato">
+              <PropertyRef Name="UsuarioContatoTipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioFoto_Usuario">
+          <End Role="Usuario" Type="muambbasqlModel.Store.Usuario" Multiplicity="1" />
+          <End Role="UsuarioFoto" Type="muambbasqlModel.Store.UsuarioFoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioFoto">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="stpCategoriaLinksUpd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="stpCategoriasFilhasUpd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Categoria_ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="stpEmailUsuarioList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stpEnderecoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="query" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stpNomeUsuarioList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="usuario" Type="varchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MVC.Models" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="muambbasqlEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="stpEnderecoList" ReturnType="Collection(MVC.Models.stpEnderecoList_Result)">
+          <Parameter Name="query" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stpNomeUsuarioList" ReturnType="Collection(Boolean)">
+          <Parameter Name="usuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stpEmailUsuarioList" ReturnType="Collection(Boolean)">
+          <Parameter Name="email" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Anuncio" EntityType="MVC.Models.Anuncio" />
+          <EntitySet Name="AnuncioFoto" EntityType="MVC.Models.AnuncioFoto" />
+          <EntitySet Name="AnuncioOferta" EntityType="MVC.Models.AnuncioOferta" />
+          <EntitySet Name="AnuncioOfertaAnuncio" EntityType="MVC.Models.AnuncioOfertaAnuncio" />
+          <EntitySet Name="AnuncioPergunta" EntityType="MVC.Models.AnuncioPergunta" />
+          <EntitySet Name="Busca" EntityType="MVC.Models.Busca" />
+          <EntitySet Name="Categoria" EntityType="MVC.Models.Categoria" />
+          <EntitySet Name="CategoriaTipo" EntityType="MVC.Models.CategoriaTipo" />
+          <EntitySet Name="Denuncia" EntityType="MVC.Models.Denuncia" />
+          <EntitySet Name="EmailMarketing" EntityType="MVC.Models.EmailMarketing" />
+          <EntitySet Name="Endereco" EntityType="MVC.Models.Endereco" />
+          <EntitySet Name="EnderecoBairro" EntityType="MVC.Models.EnderecoBairro" />
+          <EntitySet Name="EnderecoCep" EntityType="MVC.Models.EnderecoCep" />
+          <EntitySet Name="EnderecoCidade" EntityType="MVC.Models.EnderecoCidade" />
+          <EntitySet Name="EnderecoEstado" EntityType="MVC.Models.EnderecoEstado" />
+          <EntitySet Name="EnderecoLogradouroTipo" EntityType="MVC.Models.EnderecoLogradouroTipo" />
+          <EntitySet Name="Fidelidade" EntityType="MVC.Models.Fidelidade" />
+          <EntitySet Name="Sessao" EntityType="MVC.Models.Sessao" />
+          <EntitySet Name="Sugestao" EntityType="MVC.Models.Sugestao" />
+          <EntitySet Name="sysdiagrams" EntityType="MVC.Models.sysdiagrams" />
+          <EntitySet Name="Usuario" EntityType="MVC.Models.Usuario" />
+          <EntitySet Name="UsuarioAnuncioFavorito" EntityType="MVC.Models.UsuarioAnuncioFavorito" />
+          <EntitySet Name="UsuarioContato" EntityType="MVC.Models.UsuarioContato" />
+          <EntitySet Name="UsuarioContatoTipo" EntityType="MVC.Models.UsuarioContatoTipo" />
+          <EntitySet Name="UsuarioFoto" EntityType="MVC.Models.UsuarioFoto" />
+          <EntitySet Name="vwTagCloud" EntityType="MVC.Models.vwTagCloud" />
+          <AssociationSet Name="FK_Anuncio_Categoria" Association="MVC.Models.FK_Anuncio_Categoria">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_Usuario" Association="MVC.Models.FK_Anuncio_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_Usuario1" Association="MVC.Models.FK_Anuncio_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioFoto_Anuncio" Association="MVC.Models.FK_AnuncioFoto_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioFoto" EntitySet="AnuncioFoto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOferta_Anuncio" Association="MVC.Models.FK_AnuncioOferta_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioOferta" EntitySet="AnuncioOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOfertaAnuncio_Anuncio" Association="MVC.Models.FK_AnuncioOfertaAnuncio_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioOfertaAnuncio" EntitySet="AnuncioOfertaAnuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_Anuncio" Association="MVC.Models.FK_AnuncioPergunta_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioAnuncioFavorito_Anuncio" Association="MVC.Models.FK_UsuarioAnuncioFavorito_Anuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="UsuarioAnuncioFavorito" EntitySet="UsuarioAnuncioFavorito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOferta_Usuario" Association="MVC.Models.FK_AnuncioOferta_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="AnuncioOferta" EntitySet="AnuncioOferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioOfertaAnuncio_AnuncioOferta" Association="MVC.Models.FK_AnuncioOfertaAnuncio_AnuncioOferta">
+            <End Role="AnuncioOferta" EntitySet="AnuncioOferta" />
+            <End Role="AnuncioOfertaAnuncio" EntitySet="AnuncioOfertaAnuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_AnuncioPergunta" Association="MVC.Models.FK_AnuncioPergunta_AnuncioPergunta">
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+            <End Role="AnuncioPergunta1" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_Usuario" Association="MVC.Models.FK_AnuncioPergunta_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioPergunta_Usuario1" Association="MVC.Models.FK_AnuncioPergunta_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="AnuncioPergunta" EntitySet="AnuncioPergunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Busca_Usuario" Association="MVC.Models.FK_Busca_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Busca" EntitySet="Busca" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categoria_Categoria" Association="MVC.Models.FK_Categoria_Categoria">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Categoria1" EntitySet="Categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categoria_CategoriaTipo" Association="MVC.Models.FK_Categoria_CategoriaTipo">
+            <End Role="CategoriaTipo" EntitySet="CategoriaTipo" />
+            <End Role="Categoria" EntitySet="Categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Denuncia_Usuario" Association="MVC.Models.FK_Denuncia_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Denuncia" EntitySet="Denuncia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Endereco_EnderecoCep" Association="MVC.Models.FK_Endereco_EnderecoCep">
+            <End Role="EnderecoCep" EntitySet="EnderecoCep" />
+            <End Role="Endereco" EntitySet="Endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Endereco" Association="MVC.Models.FK_Usuario_Endereco">
+            <End Role="Endereco" EntitySet="Endereco" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoBairro_EnderecoCidade" Association="MVC.Models.FK_EnderecoBairro_EnderecoCidade">
+            <End Role="EnderecoCidade" EntitySet="EnderecoCidade" />
+            <End Role="EnderecoBairro" EntitySet="EnderecoBairro" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoCep_EnderecoBairro" Association="MVC.Models.FK_EnderecoCep_EnderecoBairro">
+            <End Role="EnderecoBairro" EntitySet="EnderecoBairro" />
+            <End Role="EnderecoCep" EntitySet="EnderecoCep" />
+          </AssociationSet>
+          <AssociationSet Name="EnderecoCep_fk" Association="MVC.Models.EnderecoCep_fk">
+            <End Role="EnderecoLogradouroTipo" EntitySet="EnderecoLogradouroTipo" />
+            <End Role="EnderecoCep" EntitySet="EnderecoCep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EnderecoCidade_EnderecoEstado" Association="MVC.Models.FK_EnderecoCidade_EnderecoEstado">
+            <End Role="EnderecoEstado" EntitySet="EnderecoEstado" />
+            <End Role="EnderecoCidade" EntitySet="EnderecoCidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessoes_Usuario" Association="MVC.Models.FK_Sessoes_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Sessao" EntitySet="Sessao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sugestao_Usuario" Association="MVC.Models.FK_Sugestao_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Sugestao" EntitySet="Sugestao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Usuario" Association="MVC.Models.FK_Usuario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Usuario1" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Usuario1" Association="MVC.Models.FK_Usuario_Usuario1">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Usuario1" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Usuario3" Association="MVC.Models.FK_Usuario_Usuario3">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Usuario1" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioAnuncioFavorito_Usuario" Association="MVC.Models.FK_UsuarioAnuncioFavorito_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioAnuncioFavorito" EntitySet="UsuarioAnuncioFavorito" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioContato_Usuario" Association="MVC.Models.FK_UsuarioContato_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioContato" EntitySet="UsuarioContato" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioFoto_Usuario" Association="MVC.Models.FK_UsuarioFoto_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioFoto" EntitySet="UsuarioFoto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioContato_UsuarioContatoTipo" Association="MVC.Models.FK_UsuarioContato_UsuarioContatoTipo">
+            <End Role="UsuarioContatoTipo" EntitySet="UsuarioContatoTipo" />
+            <End Role="UsuarioContato" EntitySet="UsuarioContato" />
+          </AssociationSet>
+          <FunctionImport Name="stpCategoriaLinksUpd" />
+          <FunctionImport Name="stpCategoriasFilhasUpd">
+            <Parameter Name="Categoria_ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          </EntityContainer>
+        <ComplexType Name="stpEnderecoList_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="Endereco" Nullable="false" MaxLength="421" />
+        </ComplexType>
+        <EntityType Name="Anuncio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SubTitulo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Preco" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="AnuncioConservacao_ID" Nullable="false" />
+          <Property Type="Int32" Name="AnuncioTipo_ID" Nullable="false" />
+          <Property Type="Int32" Name="Categoria_ID" Nullable="false" />
+          <Property Type="DateTime" Name="DataExp" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioInc_ID" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioUpd_ID" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <Property Type="DateTime" Name="DataUpd" />
+          <Property Type="Int32" Name="Visitas" Nullable="false" />
+          <Property Type="Byte" Name="Status" Nullable="false" />
+          <Property Type="String" Name="NomeArquivoFotoPrincipal" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Ofertas" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioExc_ID" />
+          <Property Type="String" Name="C_Tamanho" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_Cor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_Garantia" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="C_Disponibilidade" />
+          <Property Type="Int16" Name="C_Quantidade" />
+          <Property Type="Decimal" Name="C_Localizacao_Latitude" Precision="9" Scale="6" />
+          <Property Type="Decimal" Name="C_Localizacao_Longitude" Precision="9" Scale="6" />
+          <Property Type="Int32" Name="C_Veiculo_Cor_ID" />
+          <Property Type="Int32" Name="C_Veiculo_Ano_Fabricacao" />
+          <Property Type="Int32" Name="C_Veiculo_Ano_Modelo" />
+          <Property Type="Int32" Name="C_Veiculo_Combustivel_ID" />
+          <Property Type="Int32" Name="C_Veiculo_Km" />
+          <Property Type="String" Name="C_Veiculo_Acessorios" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="C_Imovel_Quartos" />
+          <Property Type="Byte" Name="C_Imovel_Suites" />
+          <Property Type="Byte" Name="C_Imovel_Vagas_Garagem" />
+          <Property Type="Int16" Name="C_Imovel_Idade" />
+          <Property Type="Decimal" Name="C_Imovel_IPTU" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="C_Imovel_Area_Terreno" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="C_Imovel_Area_Util" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="C_Imovel_Condominio_Valor" Precision="19" Scale="4" />
+          <Property Type="Byte" Name="C_Imovel_Condominio_Andar" />
+          <Property Type="Byte" Name="C_Imovel_Condominio_Andares" />
+          <Property Type="Byte" Name="C_Imovel_Condominio_Unidades_Por_Andar" />
+          <Property Type="String" Name="C_Imovel_Condominio_Administradora" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_Imovel_Condominio_Nome" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_Imovel_Condominio_Infraestrutura" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_Imovel_Instalacoes" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_Imovel_Lazer" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Categoria" Relationship="MVC.Models.FK_Anuncio_Categoria" FromRole="Anuncio" ToRole="Categoria" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_Anuncio_Usuario" FromRole="Anuncio" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="MVC.Models.FK_Anuncio_Usuario1" FromRole="Anuncio" ToRole="Usuario" />
+          <NavigationProperty Name="AnuncioFoto" Relationship="MVC.Models.FK_AnuncioFoto_Anuncio" FromRole="Anuncio" ToRole="AnuncioFoto" />
+          <NavigationProperty Name="AnuncioOferta" Relationship="MVC.Models.FK_AnuncioOferta_Anuncio" FromRole="Anuncio" ToRole="AnuncioOferta" />
+          <NavigationProperty Name="AnuncioOfertaAnuncio" Relationship="MVC.Models.FK_AnuncioOfertaAnuncio_Anuncio" FromRole="Anuncio" ToRole="AnuncioOfertaAnuncio" />
+          <NavigationProperty Name="AnuncioPergunta" Relationship="MVC.Models.FK_AnuncioPergunta_Anuncio" FromRole="Anuncio" ToRole="AnuncioPergunta" />
+          <NavigationProperty Name="UsuarioAnuncioFavorito" Relationship="MVC.Models.FK_UsuarioAnuncioFavorito_Anuncio" FromRole="Anuncio" ToRole="UsuarioAnuncioFavorito" />
+        </EntityType>
+        <EntityType Name="AnuncioFoto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Anuncio_ID" Nullable="false" />
+          <Property Type="String" Name="NomeArquivo" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_AnuncioFoto_Anuncio" FromRole="AnuncioFoto" ToRole="Anuncio" />
+        </EntityType>
+        <EntityType Name="AnuncioOferta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Anuncio_ID" Nullable="false" />
+          <Property Type="String" Name="OfertaDescricao" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="OfertaValor" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="AnuncioOfertaStatus_ID" Nullable="false" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioInc_ID" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_AnuncioOferta_Anuncio" FromRole="AnuncioOferta" ToRole="Anuncio" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_AnuncioOferta_Usuario" FromRole="AnuncioOferta" ToRole="Usuario" />
+          <NavigationProperty Name="AnuncioOfertaAnuncio" Relationship="MVC.Models.FK_AnuncioOfertaAnuncio_AnuncioOferta" FromRole="AnuncioOferta" ToRole="AnuncioOfertaAnuncio" />
+        </EntityType>
+        <EntityType Name="AnuncioOfertaAnuncio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="AnuncioOferta_ID" Nullable="false" />
+          <Property Type="Int32" Name="Anuncio_ID" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_AnuncioOfertaAnuncio_Anuncio" FromRole="AnuncioOfertaAnuncio" ToRole="Anuncio" />
+          <NavigationProperty Name="AnuncioOferta" Relationship="MVC.Models.FK_AnuncioOfertaAnuncio_AnuncioOferta" FromRole="AnuncioOfertaAnuncio" ToRole="AnuncioOferta" />
+        </EntityType>
+        <EntityType Name="AnuncioPergunta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdAnuncio" Nullable="false" />
+          <Property Type="Int32" Name="IdAnuncioPerguntaFK" />
+          <Property Type="String" Name="Pergunta" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Resposta" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdUsuarioInc" Nullable="false" />
+          <Property Type="Int32" Name="IdUsuarioUpd" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <Property Type="DateTime" Name="DataUpd" />
+          <Property Type="Byte" Name="RankResposta" />
+          <Property Type="Boolean" Name="Privada" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_AnuncioPergunta_Anuncio" FromRole="AnuncioPergunta" ToRole="Anuncio" />
+          <NavigationProperty Name="AnuncioPergunta1" Relationship="MVC.Models.FK_AnuncioPergunta_AnuncioPergunta" FromRole="AnuncioPergunta" ToRole="AnuncioPergunta1" />
+          <NavigationProperty Name="AnuncioPergunta2" Relationship="MVC.Models.FK_AnuncioPergunta_AnuncioPergunta" FromRole="AnuncioPergunta1" ToRole="AnuncioPergunta" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_AnuncioPergunta_Usuario" FromRole="AnuncioPergunta" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario1" Relationship="MVC.Models.FK_AnuncioPergunta_Usuario1" FromRole="AnuncioPergunta" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Busca">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Busca1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UsuarioInc_ID" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <Property Type="String" Name="UrlAtual" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_Busca_Usuario" FromRole="Busca" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Categoria1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CategoriaFK_ID" />
+          <Property Type="Int32" Name="CategoriaTipo_ID" Nullable="false" />
+          <Property Type="Int32" Name="QuantidadeAnuncios" Nullable="false" />
+          <Property Type="Boolean" Name="Anunciavel" Nullable="false" />
+          <Property Type="String" Name="Link" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="usaTamanho" Nullable="false" />
+          <Property Type="Boolean" Name="usaCor" Nullable="false" />
+          <Property Type="Boolean" Name="usaGarantia" Nullable="false" />
+          <Property Type="Boolean" Name="usaDisponibilidade" Nullable="false" />
+          <Property Type="Boolean" Name="usaQuantidade" Nullable="false" />
+          <Property Type="Boolean" Name="usaLocalizacao" Nullable="false" />
+          <Property Type="Boolean" Name="usaVeiculo" Nullable="false" />
+          <Property Type="Boolean" Name="usaImovel" Nullable="false" />
+          <Property Type="Boolean" Name="usaImovel_Condominio" Nullable="false" />
+          <Property Type="Boolean" Name="usaImovel_Instalacoes" Nullable="false" />
+          <Property Type="Boolean" Name="usaImovel_Lazer" Nullable="false" />
+          <Property Type="Boolean" Name="usaImovel_Residencial" Nullable="false" />
+          <Property Type="Boolean" Name="usaImovel_Garagem" Nullable="false" />
+          <Property Type="String" Name="CategoriasFilhas" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_Anuncio_Categoria" FromRole="Categoria" ToRole="Anuncio" />
+          <NavigationProperty Name="Categoria11" Relationship="MVC.Models.FK_Categoria_Categoria" FromRole="Categoria" ToRole="Categoria1" />
+          <NavigationProperty Name="Categoria2" Relationship="MVC.Models.FK_Categoria_Categoria" FromRole="Categoria1" ToRole="Categoria" />
+          <NavigationProperty Name="CategoriaTipo" Relationship="MVC.Models.FK_Categoria_CategoriaTipo" FromRole="Categoria" ToRole="CategoriaTipo" />
+        </EntityType>
+        <EntityType Name="CategoriaTipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="CategoriaTipo1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Categoria" Relationship="MVC.Models.FK_Categoria_CategoriaTipo" FromRole="CategoriaTipo" ToRole="Categoria" />
+        </EntityType>
+        <EntityType Name="Denuncia">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Denuncia1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DenunciaTipo_ID" Nullable="false" />
+          <Property Type="Int32" Name="DenunciaObjeto_ID" Nullable="false" />
+          <Property Type="Int32" Name="DenunciaClasse_ID" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioInc_ID" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <Property Type="Int32" Name="DenunciaStatus_ID" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_Denuncia_Usuario" FromRole="Denuncia" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="EmailMarketing">
+          <Key>
+            <PropertyRef Name="IdEmailMarketing" />
+          </Key>
+          <Property Type="Int32" Name="IdEmailMarketing" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmailMarketing1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="QuantidadeEnvios" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Endereco">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="EnderecoCep_ID" Nullable="false" />
+          <Property Type="String" Name="Complemento" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnderecoCep" Relationship="MVC.Models.FK_Endereco_EnderecoCep" FromRole="Endereco" ToRole="EnderecoCep" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_Usuario_Endereco" FromRole="Endereco" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="EnderecoBairro">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Bairro" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EnderecoCidade_ID" Nullable="false" />
+          <NavigationProperty Name="EnderecoCidade" Relationship="MVC.Models.FK_EnderecoBairro_EnderecoCidade" FromRole="EnderecoBairro" ToRole="EnderecoCidade" />
+          <NavigationProperty Name="EnderecoCep" Relationship="MVC.Models.FK_EnderecoCep_EnderecoBairro" FromRole="EnderecoBairro" ToRole="EnderecoCep" />
+        </EntityType>
+        <EntityType Name="EnderecoCep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="EnderecoBairro_ID" Nullable="false" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EnderecoLogradouroTipo_ID" Nullable="false" />
+          <Property Type="String" Name="Logradouro" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Endereco" Relationship="MVC.Models.FK_Endereco_EnderecoCep" FromRole="EnderecoCep" ToRole="Endereco" />
+          <NavigationProperty Name="EnderecoBairro" Relationship="MVC.Models.FK_EnderecoCep_EnderecoBairro" FromRole="EnderecoCep" ToRole="EnderecoBairro" />
+          <NavigationProperty Name="EnderecoLogradouroTipo" Relationship="MVC.Models.EnderecoCep_fk" FromRole="EnderecoCep" ToRole="EnderecoLogradouroTipo" />
+        </EntityType>
+        <EntityType Name="EnderecoCidade">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Cidade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EnderecoEstado_ID" Nullable="false" />
+          <NavigationProperty Name="EnderecoBairro" Relationship="MVC.Models.FK_EnderecoBairro_EnderecoCidade" FromRole="EnderecoCidade" ToRole="EnderecoBairro" />
+          <NavigationProperty Name="EnderecoEstado" Relationship="MVC.Models.FK_EnderecoCidade_EnderecoEstado" FromRole="EnderecoCidade" ToRole="EnderecoEstado" />
+        </EntityType>
+        <EntityType Name="EnderecoEstado">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UF" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnderecoCidade" Relationship="MVC.Models.FK_EnderecoCidade_EnderecoEstado" FromRole="EnderecoEstado" ToRole="EnderecoCidade" />
+        </EntityType>
+        <EntityType Name="EnderecoLogradouroTipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EnderecoCep" Relationship="MVC.Models.EnderecoCep_fk" FromRole="EnderecoLogradouroTipo" ToRole="EnderecoCep" />
+        </EntityType>
+        <EntityType Name="Fidelidade">
+          <Key>
+            <PropertyRef Name="IdFidelidade" />
+          </Key>
+          <Property Type="Int32" Name="IdFidelidade" Nullable="false" />
+          <Property Type="String" Name="Fidelidade1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Pontos" Nullable="false" />
+          <Property Type="Int32" Name="QuantidadeFotos" Nullable="false" />
+          <Property Type="Boolean" Name="Shop" Nullable="false" />
+          <Property Type="String" Name="Cor" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sessao">
+          <Key>
+            <PropertyRef Name="Guid" />
+          </Key>
+          <Property Type="Guid" Name="Guid" Nullable="false" />
+          <Property Type="Int32" Name="Usuario_ID" />
+          <Property Type="DateTime" Name="DataHoraInicio" Nullable="false" />
+          <Property Type="DateTime" Name="DataHoraFim" Nullable="false" />
+          <Property Type="Int32" Name="Checkpoints" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_Sessoes_Usuario" FromRole="Sessao" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Sugestao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sugestao1" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UsuarioInc_ID" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_Sugestao_Usuario" FromRole="Sugestao" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Usuario1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sobrenome" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Senha" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CPF" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UsuarioInc_ID" />
+          <Property Type="Int32" Name="UsuarioUpd_ID" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <Property Type="DateTime" Name="DataUpd" />
+          <Property Type="Boolean" Name="Administrador" Nullable="false" />
+          <Property Type="Byte" Name="Situacao" Nullable="false" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Endereco_ID" />
+          <Property Type="Int32" Name="QualificacaoPositiva" Nullable="false" />
+          <Property Type="Int32" Name="QualificacaoNegativa" Nullable="false" />
+          <Property Type="Int32" Name="QualificacaoNeutra" Nullable="false" />
+          <Property Type="String" Name="Linguagem" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="AnunciosPorPagina" Nullable="false" />
+          <Property Type="Boolean" Name="ManterConectado" Nullable="false" />
+          <Property Type="Boolean" Name="ReceberEmails" Nullable="false" />
+          <Property Type="Int32" Name="UsuarioIndicou_ID" />
+          <Property Type="String" Name="NomeArquivoFotoPrincipal" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="LoginQuantidadeTotalSucesso" Nullable="false" />
+          <Property Type="Int32" Name="LoginQuantidadeTotalFalha" Nullable="false" />
+          <Property Type="Int32" Name="LoginQuantidadeSucessivaSucesso" Nullable="false" />
+          <Property Type="Int32" Name="LoginQuantidadeSucessivaFalha" Nullable="false" />
+          <Property Type="DateTime" Name="LoginUltimoSucesso" />
+          <Property Type="DateTime" Name="LoginUltimoFalha" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_Anuncio_Usuario" FromRole="Usuario" ToRole="Anuncio" />
+          <NavigationProperty Name="Anuncio1" Relationship="MVC.Models.FK_Anuncio_Usuario1" FromRole="Usuario" ToRole="Anuncio" />
+          <NavigationProperty Name="AnuncioOferta" Relationship="MVC.Models.FK_AnuncioOferta_Usuario" FromRole="Usuario" ToRole="AnuncioOferta" />
+          <NavigationProperty Name="AnuncioPergunta" Relationship="MVC.Models.FK_AnuncioPergunta_Usuario" FromRole="Usuario" ToRole="AnuncioPergunta" />
+          <NavigationProperty Name="AnuncioPergunta1" Relationship="MVC.Models.FK_AnuncioPergunta_Usuario1" FromRole="Usuario" ToRole="AnuncioPergunta" />
+          <NavigationProperty Name="Busca" Relationship="MVC.Models.FK_Busca_Usuario" FromRole="Usuario" ToRole="Busca" />
+          <NavigationProperty Name="Denuncia" Relationship="MVC.Models.FK_Denuncia_Usuario" FromRole="Usuario" ToRole="Denuncia" />
+          <NavigationProperty Name="Endereco" Relationship="MVC.Models.FK_Usuario_Endereco" FromRole="Usuario" ToRole="Endereco" />
+          <NavigationProperty Name="Sessao" Relationship="MVC.Models.FK_Sessoes_Usuario" FromRole="Usuario" ToRole="Sessao" />
+          <NavigationProperty Name="Sugestao" Relationship="MVC.Models.FK_Sugestao_Usuario" FromRole="Usuario" ToRole="Sugestao" />
+          <NavigationProperty Name="Usuario11" Relationship="MVC.Models.FK_Usuario_Usuario" FromRole="Usuario" ToRole="Usuario1" />
+          <NavigationProperty Name="Usuario2" Relationship="MVC.Models.FK_Usuario_Usuario" FromRole="Usuario1" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario12" Relationship="MVC.Models.FK_Usuario_Usuario1" FromRole="Usuario" ToRole="Usuario1" />
+          <NavigationProperty Name="Usuario3" Relationship="MVC.Models.FK_Usuario_Usuario1" FromRole="Usuario1" ToRole="Usuario" />
+          <NavigationProperty Name="Usuario13" Relationship="MVC.Models.FK_Usuario_Usuario3" FromRole="Usuario" ToRole="Usuario1" />
+          <NavigationProperty Name="Usuario4" Relationship="MVC.Models.FK_Usuario_Usuario3" FromRole="Usuario1" ToRole="Usuario" />
+          <NavigationProperty Name="UsuarioAnuncioFavorito" Relationship="MVC.Models.FK_UsuarioAnuncioFavorito_Usuario" FromRole="Usuario" ToRole="UsuarioAnuncioFavorito" />
+          <NavigationProperty Name="UsuarioContato" Relationship="MVC.Models.FK_UsuarioContato_Usuario" FromRole="Usuario" ToRole="UsuarioContato" />
+          <NavigationProperty Name="UsuarioFoto" Relationship="MVC.Models.FK_UsuarioFoto_Usuario" FromRole="Usuario" ToRole="UsuarioFoto" />
+        </EntityType>
+        <EntityType Name="UsuarioAnuncioFavorito">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+          <Property Type="Int32" Name="IdAnuncio" Nullable="false" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="MVC.Models.FK_UsuarioAnuncioFavorito_Anuncio" FromRole="UsuarioAnuncioFavorito" ToRole="Anuncio" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_UsuarioAnuncioFavorito_Usuario" FromRole="UsuarioAnuncioFavorito" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="UsuarioContato">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Byte" Name="UsuarioContatoTipo_ID" Nullable="false" />
+          <Property Type="Int32" Name="Usuario_ID" Nullable="false" />
+          <Property Type="String" Name="UsuarioContato1" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Publico" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_UsuarioContato_Usuario" FromRole="UsuarioContato" ToRole="Usuario" />
+          <NavigationProperty Name="UsuarioContatoTipo" Relationship="MVC.Models.FK_UsuarioContato_UsuarioContatoTipo" FromRole="UsuarioContato" ToRole="UsuarioContatoTipo" />
+        </EntityType>
+        <EntityType Name="UsuarioContatoTipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Byte" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UsuarioContatoTipo1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UsuarioContato" Relationship="MVC.Models.FK_UsuarioContato_UsuarioContatoTipo" FromRole="UsuarioContatoTipo" ToRole="UsuarioContato" />
+        </EntityType>
+        <EntityType Name="UsuarioFoto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Usuario_ID" Nullable="false" />
+          <Property Type="String" Name="NomeArquivo" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DataInc" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="MVC.Models.FK_UsuarioFoto_Usuario" FromRole="UsuarioFoto" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="vwTagCloud">
+          <Key>
+            <PropertyRef Name="Busca" />
+          </Key>
+          <Property Type="Int32" Name="Quantidade" />
+          <Property Type="String" Name="Busca" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_Anuncio_Categoria">
+          <End Type="MVC.Models.Categoria" Role="Categoria" Multiplicity="1" />
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Categoria_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_Usuario1">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="UsuarioUpd_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioFoto_Anuncio">
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioFoto" Role="AnuncioFoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioFoto">
+              <PropertyRef Name="Anuncio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOferta_Anuncio">
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioOferta" Role="AnuncioOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOferta">
+              <PropertyRef Name="Anuncio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOfertaAnuncio_Anuncio">
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioOfertaAnuncio" Role="AnuncioOfertaAnuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOfertaAnuncio">
+              <PropertyRef Name="Anuncio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_Anuncio">
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioPergunta" Role="AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta">
+              <PropertyRef Name="IdAnuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioAnuncioFavorito_Anuncio">
+          <End Type="MVC.Models.Anuncio" Role="Anuncio" Multiplicity="1" />
+          <End Type="MVC.Models.UsuarioAnuncioFavorito" Role="UsuarioAnuncioFavorito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioAnuncioFavorito">
+              <PropertyRef Name="IdAnuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOferta_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioOferta" Role="AnuncioOferta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOferta">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioOfertaAnuncio_AnuncioOferta">
+          <End Type="MVC.Models.AnuncioOferta" Role="AnuncioOferta" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioOfertaAnuncio" Role="AnuncioOfertaAnuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnuncioOferta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioOfertaAnuncio">
+              <PropertyRef Name="AnuncioOferta_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_AnuncioPergunta">
+          <End Type="MVC.Models.AnuncioPergunta" Role="AnuncioPergunta" Multiplicity="0..1" />
+          <End Type="MVC.Models.AnuncioPergunta" Role="AnuncioPergunta1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnuncioPergunta">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta1">
+              <PropertyRef Name="IdAnuncioPerguntaFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="MVC.Models.AnuncioPergunta" Role="AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta">
+              <PropertyRef Name="IdUsuarioInc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioPergunta_Usuario1">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.AnuncioPergunta" Role="AnuncioPergunta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="AnuncioPergunta">
+              <PropertyRef Name="IdUsuarioUpd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Busca_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Busca" Role="Busca" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Busca">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categoria_Categoria">
+          <End Type="MVC.Models.Categoria" Role="Categoria" Multiplicity="0..1" />
+          <End Type="MVC.Models.Categoria" Role="Categoria1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Categoria1">
+              <PropertyRef Name="CategoriaFK_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categoria_CategoriaTipo">
+          <End Type="MVC.Models.CategoriaTipo" Role="CategoriaTipo" Multiplicity="1" />
+          <End Type="MVC.Models.Categoria" Role="Categoria" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaTipo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Categoria">
+              <PropertyRef Name="CategoriaTipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Denuncia_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Denuncia" Role="Denuncia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Denuncia">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Endereco_EnderecoCep">
+          <End Type="MVC.Models.EnderecoCep" Role="EnderecoCep" Multiplicity="1" />
+          <End Type="MVC.Models.Endereco" Role="Endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoCep">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Endereco">
+              <PropertyRef Name="EnderecoCep_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Endereco">
+          <End Type="MVC.Models.Endereco" Role="Endereco" Multiplicity="0..1" />
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Endereco">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="Endereco_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoBairro_EnderecoCidade">
+          <End Type="MVC.Models.EnderecoCidade" Role="EnderecoCidade" Multiplicity="1" />
+          <End Type="MVC.Models.EnderecoBairro" Role="EnderecoBairro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoCidade">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoBairro">
+              <PropertyRef Name="EnderecoCidade_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoCep_EnderecoBairro">
+          <End Type="MVC.Models.EnderecoBairro" Role="EnderecoBairro" Multiplicity="1" />
+          <End Type="MVC.Models.EnderecoCep" Role="EnderecoCep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoBairro">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoCep">
+              <PropertyRef Name="EnderecoBairro_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EnderecoCep_fk">
+          <End Type="MVC.Models.EnderecoLogradouroTipo" Role="EnderecoLogradouroTipo" Multiplicity="1" />
+          <End Type="MVC.Models.EnderecoCep" Role="EnderecoCep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoLogradouroTipo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoCep">
+              <PropertyRef Name="EnderecoLogradouroTipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EnderecoCidade_EnderecoEstado">
+          <End Type="MVC.Models.EnderecoEstado" Role="EnderecoEstado" Multiplicity="1" />
+          <End Type="MVC.Models.EnderecoCidade" Role="EnderecoCidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnderecoEstado">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EnderecoCidade">
+              <PropertyRef Name="EnderecoEstado_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessoes_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Sessao" Role="Sessao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessao">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sugestao_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Sugestao" Role="Sugestao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sugestao">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Usuario" Role="Usuario1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario1">
+              <PropertyRef Name="UsuarioInc_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Usuario1">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Usuario" Role="Usuario1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario1">
+              <PropertyRef Name="UsuarioUpd_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Usuario3">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <End Type="MVC.Models.Usuario" Role="Usuario1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Usuario1">
+              <PropertyRef Name="UsuarioIndicou_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioAnuncioFavorito_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="MVC.Models.UsuarioAnuncioFavorito" Role="UsuarioAnuncioFavorito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioAnuncioFavorito">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioContato_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="MVC.Models.UsuarioContato" Role="UsuarioContato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioContato">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioFoto_Usuario">
+          <End Type="MVC.Models.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="MVC.Models.UsuarioFoto" Role="UsuarioFoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioFoto">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioContato_UsuarioContatoTipo">
+          <End Type="MVC.Models.UsuarioContatoTipo" Role="UsuarioContatoTipo" Multiplicity="1" />
+          <End Type="MVC.Models.UsuarioContato" Role="UsuarioContato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsuarioContatoTipo">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UsuarioContato">
+              <PropertyRef Name="UsuarioContatoTipo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="muambbasqlModelStoreContainer" CdmEntityContainer="muambbasqlEntities">
+          <FunctionImportMapping FunctionImportName="stpEnderecoList" FunctionName="muambbasqlModel.Store.stpEnderecoList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MVC.Models.stpEnderecoList_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stpNomeUsuarioList" FunctionName="muambbasqlModel.Store.stpNomeUsuarioList" />
+          <FunctionImportMapping FunctionImportName="stpEmailUsuarioList" FunctionName="muambbasqlModel.Store.stpEmailUsuarioList" />
+          <EntitySetMapping Name="Anuncio">
+            <EntityTypeMapping TypeName="MVC.Models.Anuncio">
+              <MappingFragment StoreEntitySet="Anuncio">
+                <ScalarProperty Name="C_Imovel_Lazer" ColumnName="_Imovel_Lazer" />
+                <ScalarProperty Name="C_Imovel_Instalacoes" ColumnName="_Imovel_Instalacoes" />
+                <ScalarProperty Name="C_Imovel_Condominio_Infraestrutura" ColumnName="_Imovel_Condominio_Infraestrutura" />
+                <ScalarProperty Name="C_Imovel_Condominio_Nome" ColumnName="_Imovel_Condominio_Nome" />
+                <ScalarProperty Name="C_Imovel_Condominio_Administradora" ColumnName="_Imovel_Condominio_Administradora" />
+                <ScalarProperty Name="C_Imovel_Condominio_Unidades_Por_Andar" ColumnName="_Imovel_Condominio_Unidades_Por_Andar" />
+                <ScalarProperty Name="C_Imovel_Condominio_Andares" ColumnName="_Imovel_Condominio_Andares" />
+                <ScalarProperty Name="C_Imovel_Condominio_Andar" ColumnName="_Imovel_Condominio_Andar" />
+                <ScalarProperty Name="C_Imovel_Condominio_Valor" ColumnName="_Imovel_Condominio_Valor" />
+                <ScalarProperty Name="C_Imovel_Area_Util" ColumnName="_Imovel_Area_Util" />
+                <ScalarProperty Name="C_Imovel_Area_Terreno" ColumnName="_Imovel_Area_Terreno" />
+                <ScalarProperty Name="C_Imovel_IPTU" ColumnName="_Imovel_IPTU" />
+                <ScalarProperty Name="C_Imovel_Idade" ColumnName="_Imovel_Idade" />
+                <ScalarProperty Name="C_Imovel_Vagas_Garagem" ColumnName="_Imovel_Vagas_Garagem" />
+                <ScalarProperty Name="C_Imovel_Suites" ColumnName="_Imovel_Suites" />
+                <ScalarProperty Name="C_Imovel_Quartos" ColumnName="_Imovel_Quartos" />
+                <ScalarProperty Name="C_Veiculo_Acessorios" ColumnName="_Veiculo_Acessorios" />
+                <ScalarProperty Name="C_Veiculo_Km" ColumnName="_Veiculo_Km" />
+                <ScalarProperty Name="C_Veiculo_Combustivel_ID" ColumnName="_Veiculo_Combustivel_ID" />
+                <ScalarProperty Name="C_Veiculo_Ano_Modelo" ColumnName="_Veiculo_Ano_Modelo" />
+                <ScalarProperty Name="C_Veiculo_Ano_Fabricacao" ColumnName="_Veiculo_Ano_Fabricacao" />
+                <ScalarProperty Name="C_Veiculo_Cor_ID" ColumnName="_Veiculo_Cor_ID" />
+                <ScalarProperty Name="C_Localizacao_Longitude" ColumnName="_Localizacao_Longitude" />
+                <ScalarProperty Name="C_Localizacao_Latitude" ColumnName="_Localizacao_Latitude" />
+                <ScalarProperty Name="C_Quantidade" ColumnName="_Quantidade" />
+                <ScalarProperty Name="C_Disponibilidade" ColumnName="_Disponibilidade" />
+                <ScalarProperty Name="C_Garantia" ColumnName="_Garantia" />
+                <ScalarProperty Name="C_Cor" ColumnName="_Cor" />
+                <ScalarProperty Name="C_Tamanho" ColumnName="_Tamanho" />
+                <ScalarProperty Name="UsuarioExc_ID" ColumnName="UsuarioExc_ID" />
+                <ScalarProperty Name="Ofertas" ColumnName="Ofertas" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="NomeArquivoFotoPrincipal" ColumnName="NomeArquivoFotoPrincipal" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Visitas" ColumnName="Visitas" />
+                <ScalarProperty Name="DataUpd" ColumnName="DataUpd" />
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="UsuarioUpd_ID" ColumnName="UsuarioUpd_ID" />
+                <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+                <ScalarProperty Name="DataExp" ColumnName="DataExp" />
+                <ScalarProperty Name="Categoria_ID" ColumnName="Categoria_ID" />
+                <ScalarProperty Name="AnuncioTipo_ID" ColumnName="AnuncioTipo_ID" />
+                <ScalarProperty Name="AnuncioConservacao_ID" ColumnName="AnuncioConservacao_ID" />
+                <ScalarProperty Name="Preco" ColumnName="Preco" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnuncioFoto">
+            <EntityTypeMapping TypeName="MVC.Models.AnuncioFoto">
+              <MappingFragment StoreEntitySet="AnuncioFoto">
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="NomeArquivo" ColumnName="NomeArquivo" />
+                <ScalarProperty Name="Anuncio_ID" ColumnName="Anuncio_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnuncioOferta">
+            <EntityTypeMapping TypeName="MVC.Models.AnuncioOferta">
+              <MappingFragment StoreEntitySet="AnuncioOferta">
+                <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="AnuncioOfertaStatus_ID" ColumnName="AnuncioOfertaStatus_ID" />
+                <ScalarProperty Name="OfertaValor" ColumnName="OfertaValor" />
+                <ScalarProperty Name="OfertaDescricao" ColumnName="OfertaDescricao" />
+                <ScalarProperty Name="Anuncio_ID" ColumnName="Anuncio_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnuncioOfertaAnuncio">
+            <EntityTypeMapping TypeName="MVC.Models.AnuncioOfertaAnuncio">
+              <MappingFragment StoreEntitySet="AnuncioOfertaAnuncio">
+                <ScalarProperty Name="Anuncio_ID" ColumnName="Anuncio_ID" />
+                <ScalarProperty Name="AnuncioOferta_ID" ColumnName="AnuncioOferta_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnuncioPergunta">
+            <EntityTypeMapping TypeName="MVC.Models.AnuncioPergunta">
+              <MappingFragment StoreEntitySet="AnuncioPergunta">
+                <ScalarProperty Name="Privada" ColumnName="Privada" />
+                <ScalarProperty Name="RankResposta" ColumnName="RankResposta" />
+                <ScalarProperty Name="DataUpd" ColumnName="DataUpd" />
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="IdUsuarioUpd" ColumnName="IdUsuarioUpd" />
+                <ScalarProperty Name="IdUsuarioInc" ColumnName="IdUsuarioInc" />
+                <ScalarProperty Name="Resposta" ColumnName="Resposta" />
+                <ScalarProperty Name="Pergunta" ColumnName="Pergunta" />
+                <ScalarProperty Name="IdAnuncioPerguntaFK" ColumnName="IdAnuncioPerguntaFK" />
+                <ScalarProperty Name="IdAnuncio" ColumnName="IdAnuncio" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Busca">
+            <EntityTypeMapping TypeName="MVC.Models.Busca">
+              <MappingFragment StoreEntitySet="Busca">
+                <ScalarProperty Name="UrlAtual" ColumnName="UrlAtual" />
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+                <ScalarProperty Name="Busca1" ColumnName="Busca" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categoria">
+            <EntityTypeMapping TypeName="MVC.Models.Categoria">
+              <MappingFragment StoreEntitySet="Categoria">
+                <ScalarProperty Name="CategoriasFilhas" ColumnName="CategoriasFilhas" />
+                <ScalarProperty Name="usaImovel_Garagem" ColumnName="usaImovel_Garagem" />
+                <ScalarProperty Name="usaImovel_Residencial" ColumnName="usaImovel_Residencial" />
+                <ScalarProperty Name="usaImovel_Lazer" ColumnName="usaImovel_Lazer" />
+                <ScalarProperty Name="usaImovel_Instalacoes" ColumnName="usaImovel_Instalacoes" />
+                <ScalarProperty Name="usaImovel_Condominio" ColumnName="usaImovel_Condominio" />
+                <ScalarProperty Name="usaImovel" ColumnName="usaImovel" />
+                <ScalarProperty Name="usaVeiculo" ColumnName="usaVeiculo" />
+                <ScalarProperty Name="usaLocalizacao" ColumnName="usaLocalizacao" />
+                <ScalarProperty Name="usaQuantidade" ColumnName="usaQuantidade" />
+                <ScalarProperty Name="usaDisponibilidade" ColumnName="usaDisponibilidade" />
+                <ScalarProperty Name="usaGarantia" ColumnName="usaGarantia" />
+                <ScalarProperty Name="usaCor" ColumnName="usaCor" />
+                <ScalarProperty Name="usaTamanho" ColumnName="usaTamanho" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Anunciavel" ColumnName="Anunciavel" />
+                <ScalarProperty Name="QuantidadeAnuncios" ColumnName="QuantidadeAnuncios" />
+                <ScalarProperty Name="CategoriaTipo_ID" ColumnName="CategoriaTipo_ID" />
+                <ScalarProperty Name="CategoriaFK_ID" ColumnName="CategoriaFK_ID" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Categoria1" ColumnName="Categoria" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoriaTipo">
+            <EntityTypeMapping TypeName="MVC.Models.CategoriaTipo">
+              <MappingFragment StoreEntitySet="CategoriaTipo">
+                <ScalarProperty Name="CategoriaTipo1" ColumnName="CategoriaTipo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Denuncia">
+            <EntityTypeMapping TypeName="MVC.Models.Denuncia">
+              <MappingFragment StoreEntitySet="Denuncia">
+                <ScalarProperty Name="DenunciaStatus_ID" ColumnName="DenunciaStatus_ID" />
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+                <ScalarProperty Name="DenunciaClasse_ID" ColumnName="DenunciaClasse_ID" />
+                <ScalarProperty Name="DenunciaObjeto_ID" ColumnName="DenunciaObjeto_ID" />
+                <ScalarProperty Name="DenunciaTipo_ID" ColumnName="DenunciaTipo_ID" />
+                <ScalarProperty Name="Denuncia1" ColumnName="Denuncia" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailMarketing">
+            <EntityTypeMapping TypeName="MVC.Models.EmailMarketing">
+              <MappingFragment StoreEntitySet="EmailMarketing">
+                <ScalarProperty Name="QuantidadeEnvios" ColumnName="QuantidadeEnvios" />
+                <ScalarProperty Name="EmailMarketing1" ColumnName="EmailMarketing" />
+                <ScalarProperty Name="IdEmailMarketing" ColumnName="IdEmailMarketing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Endereco">
+            <EntityTypeMapping TypeName="MVC.Models.Endereco">
+              <MappingFragment StoreEntitySet="Endereco">
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="EnderecoCep_ID" ColumnName="EnderecoCep_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnderecoBairro">
+            <EntityTypeMapping TypeName="MVC.Models.EnderecoBairro">
+              <MappingFragment StoreEntitySet="EnderecoBairro">
+                <ScalarProperty Name="EnderecoCidade_ID" ColumnName="EnderecoCidade_ID" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnderecoCep">
+            <EntityTypeMapping TypeName="MVC.Models.EnderecoCep">
+              <MappingFragment StoreEntitySet="EnderecoCep">
+                <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+                <ScalarProperty Name="EnderecoLogradouroTipo_ID" ColumnName="EnderecoLogradouroTipo_ID" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="EnderecoBairro_ID" ColumnName="EnderecoBairro_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnderecoCidade">
+            <EntityTypeMapping TypeName="MVC.Models.EnderecoCidade">
+              <MappingFragment StoreEntitySet="EnderecoCidade">
+                <ScalarProperty Name="EnderecoEstado_ID" ColumnName="EnderecoEstado_ID" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnderecoEstado">
+            <EntityTypeMapping TypeName="MVC.Models.EnderecoEstado">
+              <MappingFragment StoreEntitySet="EnderecoEstado">
+                <ScalarProperty Name="UF" ColumnName="UF" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnderecoLogradouroTipo">
+            <EntityTypeMapping TypeName="MVC.Models.EnderecoLogradouroTipo">
+              <MappingFragment StoreEntitySet="EnderecoLogradouroTipo">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fidelidade">
+            <EntityTypeMapping TypeName="MVC.Models.Fidelidade">
+              <MappingFragment StoreEntitySet="Fidelidade">
+                <ScalarProperty Name="Cor" ColumnName="Cor" />
+                <ScalarProperty Name="Shop" ColumnName="Shop" />
+                <ScalarProperty Name="QuantidadeFotos" ColumnName="QuantidadeFotos" />
+                <ScalarProperty Name="Pontos" ColumnName="Pontos" />
+                <ScalarProperty Name="Fidelidade1" ColumnName="Fidelidade" />
+                <ScalarProperty Name="IdFidelidade" ColumnName="IdFidelidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessao">
+            <EntityTypeMapping TypeName="MVC.Models.Sessao">
+              <MappingFragment StoreEntitySet="Sessao">
+                <ScalarProperty Name="Checkpoints" ColumnName="Checkpoints" />
+                <ScalarProperty Name="DataHoraFim" ColumnName="DataHoraFim" />
+                <ScalarProperty Name="DataHoraInicio" ColumnName="DataHoraInicio" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sugestao">
+            <EntityTypeMapping TypeName="MVC.Models.Sugestao">
+              <MappingFragment StoreEntitySet="Sugestao">
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+                <ScalarProperty Name="Sugestao1" ColumnName="Sugestao" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MVC.Models.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="MVC.Models.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="LoginUltimoFalha" ColumnName="LoginUltimoFalha" />
+                <ScalarProperty Name="LoginUltimoSucesso" ColumnName="LoginUltimoSucesso" />
+                <ScalarProperty Name="LoginQuantidadeSucessivaFalha" ColumnName="LoginQuantidadeSucessivaFalha" />
+                <ScalarProperty Name="LoginQuantidadeSucessivaSucesso" ColumnName="LoginQuantidadeSucessivaSucesso" />
+                <ScalarProperty Name="LoginQuantidadeTotalFalha" ColumnName="LoginQuantidadeTotalFalha" />
+                <ScalarProperty Name="LoginQuantidadeTotalSucesso" ColumnName="LoginQuantidadeTotalSucesso" />
+                <ScalarProperty Name="NomeArquivoFotoPrincipal" ColumnName="NomeArquivoFotoPrincipal" />
+                <ScalarProperty Name="UsuarioIndicou_ID" ColumnName="UsuarioIndicou_ID" />
+                <ScalarProperty Name="ReceberEmails" ColumnName="ReceberEmails" />
+                <ScalarProperty Name="ManterConectado" ColumnName="ManterConectado" />
+                <ScalarProperty Name="AnunciosPorPagina" ColumnName="AnunciosPorPagina" />
+                <ScalarProperty Name="Linguagem" ColumnName="Linguagem" />
+                <ScalarProperty Name="QualificacaoNeutra" ColumnName="QualificacaoNeutra" />
+                <ScalarProperty Name="QualificacaoNegativa" ColumnName="QualificacaoNegativa" />
+                <ScalarProperty Name="QualificacaoPositiva" ColumnName="QualificacaoPositiva" />
+                <ScalarProperty Name="Endereco_ID" ColumnName="Endereco_ID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+                <ScalarProperty Name="Administrador" ColumnName="Administrador" />
+                <ScalarProperty Name="DataUpd" ColumnName="DataUpd" />
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="UsuarioUpd_ID" ColumnName="UsuarioUpd_ID" />
+                <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Sobrenome" ColumnName="Sobrenome" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioAnuncioFavorito">
+            <EntityTypeMapping TypeName="MVC.Models.UsuarioAnuncioFavorito">
+              <MappingFragment StoreEntitySet="UsuarioAnuncioFavorito">
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="IdAnuncio" ColumnName="IdAnuncio" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioContato">
+            <EntityTypeMapping TypeName="MVC.Models.UsuarioContato">
+              <MappingFragment StoreEntitySet="UsuarioContato">
+                <ScalarProperty Name="Publico" ColumnName="Publico" />
+                <ScalarProperty Name="UsuarioContato1" ColumnName="UsuarioContato" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="UsuarioContatoTipo_ID" ColumnName="UsuarioContatoTipo_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioContatoTipo">
+            <EntityTypeMapping TypeName="MVC.Models.UsuarioContatoTipo">
+              <MappingFragment StoreEntitySet="UsuarioContatoTipo">
+                <ScalarProperty Name="UsuarioContatoTipo1" ColumnName="UsuarioContatoTipo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioFoto">
+            <EntityTypeMapping TypeName="MVC.Models.UsuarioFoto">
+              <MappingFragment StoreEntitySet="UsuarioFoto">
+                <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+                <ScalarProperty Name="NomeArquivo" ColumnName="NomeArquivo" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwTagCloud">
+            <EntityTypeMapping TypeName="MVC.Models.vwTagCloud">
+              <MappingFragment StoreEntitySet="vwTagCloud">
+                <ScalarProperty Name="Busca" ColumnName="Busca" />
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="stpCategoriaLinksUpd" FunctionName="muambbasqlModel.Store.stpCategoriaLinksUpd" />
+          <FunctionImportMapping FunctionImportName="stpCategoriasFilhasUpd" FunctionName="muambbasqlModel.Store.stpCategoriasFilhasUpd" />
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Modelo" ZoomLevel="93">
+        <EntityTypeShape EntityType="MVC.Models.Anuncio" Width="1.5" PointX="14.25" PointY="10.375" Height="11.787659505208339" />
+        <EntityTypeShape EntityType="MVC.Models.AnuncioFoto" Width="1.5" PointX="16.5" PointY="14.25" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="MVC.Models.AnuncioOferta" Width="1.5" PointX="19.5" PointY="15.375" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="MVC.Models.AnuncioOfertaAnuncio" Width="1.5" PointX="21.75" PointY="15.25" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MVC.Models.AnuncioPergunta" Width="1.5" PointX="19.5" PointY="19.875" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="MVC.Models.Busca" Width="1.5" PointX="14.25" PointY="23.625" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="MVC.Models.Categoria" Width="1.5" PointX="12" PointY="6.25" Height="6.0186165364583246" />
+        <EntityTypeShape EntityType="MVC.Models.CategoriaTipo" Width="1.5" PointX="9.75" PointY="8.5" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="MVC.Models.Denuncia" Width="1.5" PointX="14.25" PointY="26.5" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="MVC.Models.EmailMarketing" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="MVC.Models.Endereco" Width="1.5" PointX="9.75" PointY="17.25" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MVC.Models.EnderecoBairro" Width="1.5" PointX="5.25" PointY="17.25" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MVC.Models.EnderecoCep" Width="1.5" PointX="7.5" PointY="17" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="MVC.Models.EnderecoCidade" Width="1.5" PointX="3" PointY="17.25" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="MVC.Models.EnderecoEstado" Width="1.5" PointX="0.75" PointY="17.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="MVC.Models.EnderecoLogradouroTipo" Width="1.5" PointX="5.25" PointY="14.5" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="MVC.Models.Fidelidade" Width="1.5" PointX="2.75" PointY="0.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="MVC.Models.Sessao" Width="1.5" PointX="14.25" PointY="30" Height="2.1725878906250067" />
+        <EntityTypeShape EntityType="MVC.Models.Sugestao" Width="1.5" PointX="14.25" PointY="33" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="MVC.Models.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="MVC.Models.Usuario" Width="1.5" PointX="12" PointY="13.125" Height="10.249248046874982" />
+        <EntityTypeShape EntityType="MVC.Models.UsuarioAnuncioFavorito" Width="1.5" PointX="19.5" PointY="11.875" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="MVC.Models.UsuarioContato" Width="1.5" PointX="17.25" PointY="17.125" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="MVC.Models.UsuarioContatoTipo" Width="1.5" PointX="15" PointY="7.5" Height="1.5956835937499818" />
+        <EntityTypeShape EntityType="MVC.Models.UsuarioFoto" Width="1.5" PointX="14.25" PointY="39.125" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="MVC.Models.vwTagCloud" Width="1.5" PointX="2.75" PointY="3.75" Height="1.4033821614583246" />
+        <AssociationConnector Association="MVC.Models.FK_Anuncio_Categoria" >
+          <ConnectorPoint PointX="13.5" PointY="11.321808268229162" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="11.321808268229162" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="11.321808268229162" />
+          <ConnectorPoint PointX="14.25" PointY="11.321808268229162" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Anuncio_Usuario" >
+          <ConnectorPoint PointX="13.5" PointY="17.643829752604169" />
+          <ConnectorPoint PointX="14.25" PointY="17.643829752604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Anuncio_Usuario1" >
+          <ConnectorPoint PointX="13.5" PointY="15.321914876302085" />
+          <ConnectorPoint PointX="14.25" PointY="15.321914876302085" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioFoto_Anuncio" >
+          <ConnectorPoint PointX="15.75" PointY="15.240143229166662" />
+          <ConnectorPoint PointX="16.5" PointY="15.240143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioOferta_Anuncio" >
+          <ConnectorPoint PointX="15.75" PointY="16.677643229166662" />
+          <ConnectorPoint PointX="18.322916666666668" PointY="16.677643229166662" />
+          <ConnectorPoint PointX="18.489583333333332" PointY="16.677643229166662" />
+          <ConnectorPoint PointX="19.5" PointY="16.677643229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioOfertaAnuncio_Anuncio" >
+          <ConnectorPoint PointX="15.75" PointY="19.682444661458334" />
+          <ConnectorPoint PointX="17.916666666666668" PointY="19.682444661458334" />
+          <ConnectorPoint PointX="18.083333333333332" PointY="19.682444661458334" />
+          <ConnectorPoint PointX="19.041666666666668" PointY="19.682444661458334" />
+          <ConnectorPoint PointX="19.208333333333332" PointY="19.682444661458334" />
+          <ConnectorPoint PointX="22.5" PointY="19.682444661458334" />
+          <ConnectorPoint PointX="22.5" PointY="17.230286458333339" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioPergunta_Anuncio" >
+          <ConnectorPoint PointX="15.75" PointY="21.018829752604169" />
+          <ConnectorPoint PointX="17.916666666666668" PointY="21.018829752604169" />
+          <ConnectorPoint PointX="18.083333333333332" PointY="21.018829752604169" />
+          <ConnectorPoint PointX="19.041666666666668" PointY="21.018829752604169" />
+          <ConnectorPoint PointX="19.208333333333332" PointY="21.018829752604169" />
+          <ConnectorPoint PointX="19.5" PointY="21.018829752604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_UsuarioAnuncioFavorito_Anuncio" >
+          <ConnectorPoint PointX="15.75" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="18.322916666666668" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="18.489583333333332" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="19.041666666666668" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="19.208333333333332" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="19.5" PointY="12.961293945312491" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioOferta_Usuario" >
+          <ConnectorPoint PointX="12.75" PointY="23.374248046874982" />
+          <ConnectorPoint PointX="12.75" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="12.869792916666667" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="13.036459583333334" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="13.072919166666667" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="13.239585833333335" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="13.276045416666667" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="13.442712083333335" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="14" PointY="23.624248046874982" />
+          <ConnectorPoint PointX="14" PointY="22.412659505208339" />
+          <ConnectorPoint PointX="17.916666666666668" PointY="22.412659505208339" />
+          <ConnectorPoint PointX="18.083333333333332" PointY="22.412659505208339" />
+          <ConnectorPoint PointX="19.125" PointY="22.412659505208339" />
+          <ConnectorPoint PointX="19.125" PointY="17.52847042447916" />
+          <ConnectorPoint PointX="19.5" PointY="17.52847042447916" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioOfertaAnuncio_AnuncioOferta" >
+          <ConnectorPoint PointX="21" PointY="16.302643229166669" />
+          <ConnectorPoint PointX="21.75" PointY="16.302643229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioPergunta_AnuncioPergunta" >
+          <ConnectorPoint PointX="20.031923076923075" PointY="23.970602213541667" />
+          <ConnectorPoint PointX="20.031923076923075" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="20.478461538461538" PointY="24.220602213541667" />
+          <ConnectorPoint PointX="20.478461538461538" PointY="23.970602213541667" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioPergunta_Usuario" >
+          <ConnectorPoint PointX="13.5" PointY="22.95595377604166" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="22.95595377604166" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="22.95595377604166" />
+          <ConnectorPoint PointX="17.916666666666668" PointY="22.95595377604166" />
+          <ConnectorPoint PointX="18.083333333333332" PointY="22.95595377604166" />
+          <ConnectorPoint PointX="19.5" PointY="22.95595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_AnuncioPergunta_Usuario1" >
+          <ConnectorPoint PointX="13.5" PointY="22.684306640625" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="22.684306640625" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="22.684306640625" />
+          <ConnectorPoint PointX="17.916666666666668" PointY="22.684306640625" />
+          <ConnectorPoint PointX="18.083333333333332" PointY="22.684306640625" />
+          <ConnectorPoint PointX="19.5" PointY="22.684306640625" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Busca_Usuario" >
+          <ConnectorPoint PointX="13.1562525" PointY="23.374248046874982" />
+          <ConnectorPoint PointX="13.1562525" PointY="24.711293945312498" />
+          <ConnectorPoint PointX="13.276045416666667" PointY="24.711293945312498" />
+          <ConnectorPoint PointX="13.442712083333335" PointY="24.711293945312498" />
+          <ConnectorPoint PointX="14.25" PointY="24.711293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Categoria_Categoria" >
+          <ConnectorPoint PointX="12.531923076923077" PointY="12.268616536458325" />
+          <ConnectorPoint PointX="12.531923076923077" PointY="12.518616536458325" />
+          <ConnectorPoint PointX="12.978461538461538" PointY="12.518616536458325" />
+          <ConnectorPoint PointX="12.978461538461538" PointY="12.268616536458325" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Categoria_CategoriaTipo" >
+          <ConnectorPoint PointX="11.25" PointY="9.297841796874998" />
+          <ConnectorPoint PointX="12" PointY="9.297841796874998" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Denuncia_Usuario" >
+          <ConnectorPoint PointX="12.3437475" PointY="23.374248046874982" />
+          <ConnectorPoint PointX="12.3437475" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="12.463540416666666" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="12.630207083333334" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="12.869792916666667" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="13.036459583333334" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="13.276045416666667" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="13.442712083333335" PointY="27.874746093749998" />
+          <ConnectorPoint PointX="14.25" PointY="27.874746093749998" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Endereco_EnderecoCep" >
+          <ConnectorPoint PointX="9" PointY="18.240143229166669" />
+          <ConnectorPoint PointX="9.75" PointY="18.240143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Usuario_Endereco" >
+          <ConnectorPoint PointX="11.25" PointY="18.240143229166669" />
+          <ConnectorPoint PointX="11.666666666666666" PointY="18.240143229166669" />
+          <ConnectorPoint PointX="11.833333333333334" PointY="18.240143229166669" />
+          <ConnectorPoint PointX="12" PointY="18.240143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_EnderecoBairro_EnderecoCidade" >
+          <ConnectorPoint PointX="4.5" PointY="18.240143229166669" />
+          <ConnectorPoint PointX="5.25" PointY="18.240143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_EnderecoCep_EnderecoBairro" >
+          <ConnectorPoint PointX="6.75" PointY="18.240143229166669" />
+          <ConnectorPoint PointX="7.5" PointY="18.240143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.EnderecoCep_fk" >
+          <ConnectorPoint PointX="6.75" PointY="15.297841796874998" />
+          <ConnectorPoint PointX="8.25" PointY="15.297841796874998" />
+          <ConnectorPoint PointX="8.25" PointY="17" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_EnderecoCidade_EnderecoEstado" >
+          <ConnectorPoint PointX="2.25" PointY="18.268992513020834" />
+          <ConnectorPoint PointX="3" PointY="18.268992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Sessoes_Usuario" >
+          <ConnectorPoint PointX="13.359378750000001" PointY="23.374248046874982" />
+          <ConnectorPoint PointX="13.359378750000001" PointY="31.086293945312505" />
+          <ConnectorPoint PointX="14.25" PointY="31.086293945312505" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Sugestao_Usuario" >
+          <ConnectorPoint PointX="12.95312625" PointY="23.374248046874982" />
+          <ConnectorPoint PointX="12.95312625" PointY="34.182444661458334" />
+          <ConnectorPoint PointX="14.25" PointY="34.182444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Usuario_Usuario" >
+          <ConnectorPoint PointX="12.521538461538462" PointY="13.125" />
+          <ConnectorPoint PointX="12.521538461538462" PointY="12.75" />
+          <ConnectorPoint PointX="12.739615384615384" PointY="12.75" />
+          <ConnectorPoint PointX="12.739615384615384" PointY="13.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Usuario_Usuario1" >
+          <ConnectorPoint PointX="12" PointY="16.618207031249995" />
+          <ConnectorPoint PointX="11.75" PointY="16.618207031249995" />
+          <ConnectorPoint PointX="11.75" PointY="19.958727539062487" />
+          <ConnectorPoint PointX="12" PointY="19.958727539062487" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_Usuario_Usuario3" >
+          <ConnectorPoint PointX="12.957692307692309" PointY="13.125" />
+          <ConnectorPoint PointX="12.957692307692309" PointY="12.875" />
+          <ConnectorPoint PointX="13.17576923076923" PointY="12.875" />
+          <ConnectorPoint PointX="13.17576923076923" PointY="13.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_UsuarioAnuncioFavorito_Usuario" >
+          <ConnectorPoint PointX="12.75" PointY="13.125" />
+          <ConnectorPoint PointX="12.75" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="12.874358974358975" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="13.041025641025643" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="13.092435897435896" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="13.259102564102564" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="14" PointY="12.961293945312491" />
+          <ConnectorPoint PointX="14" PointY="10.125" />
+          <ConnectorPoint PointX="18.322916666666668" PointY="10.125" />
+          <ConnectorPoint PointX="18.489583333333332" PointY="10.125" />
+          <ConnectorPoint PointX="19.125" PointY="10.125" />
+          <ConnectorPoint PointX="19.125" PointY="13.535692917968731" />
+          <ConnectorPoint PointX="19.5" PointY="13.535692917968731" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_UsuarioContato_Usuario" >
+          <ConnectorPoint PointX="13.5" PointY="23.196353411458372" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="23.196353411458372" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="23.196353411458372" />
+          <ConnectorPoint PointX="18" PointY="23.196353411458372" />
+          <ConnectorPoint PointX="18" PointY="19.489889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_UsuarioFoto_Usuario" >
+          <ConnectorPoint PointX="12.54687375" PointY="23.374248046874982" />
+          <ConnectorPoint PointX="12.54687375" PointY="40.115143229166677" />
+          <ConnectorPoint PointX="14.25" PointY="40.115143229166677" />
+        </AssociationConnector>
+        <AssociationConnector Association="MVC.Models.FK_UsuarioContato_UsuarioContatoTipo" >
+          <ConnectorPoint PointX="16.5" PointY="8.2978417968749909" />
+          <ConnectorPoint PointX="18.40625" PointY="8.2978417968749909" />
+          <ConnectorPoint PointX="18.40625" PointY="17.125" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="muambbasqlModelStoreContainer" CdmEntityContainer="muambbasqlEntities">
+    <FunctionImportMapping FunctionImportName="stpEnderecoList" FunctionName="muambbasqlModel.Store.stpEnderecoList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MVC.Models.stpEnderecoList_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stpNomeUsuarioList" FunctionName="muambbasqlModel.Store.stpNomeUsuarioList" />
+    <FunctionImportMapping FunctionImportName="stpEmailUsuarioList" FunctionName="muambbasqlModel.Store.stpEmailUsuarioList" />
+    <EntitySetMapping Name="Anuncio">
+      <EntityTypeMapping TypeName="MVC.Models.Anuncio">
+        <MappingFragment StoreEntitySet="Anuncio">
+          <ScalarProperty Name="C_Imovel_Lazer" ColumnName="_Imovel_Lazer" />
+          <ScalarProperty Name="C_Imovel_Instalacoes" ColumnName="_Imovel_Instalacoes" />
+          <ScalarProperty Name="C_Imovel_Condominio_Infraestrutura" ColumnName="_Imovel_Condominio_Infraestrutura" />
+          <ScalarProperty Name="C_Imovel_Condominio_Nome" ColumnName="_Imovel_Condominio_Nome" />
+          <ScalarProperty Name="C_Imovel_Condominio_Administradora" ColumnName="_Imovel_Condominio_Administradora" />
+          <ScalarProperty Name="C_Imovel_Condominio_Unidades_Por_Andar" ColumnName="_Imovel_Condominio_Unidades_Por_Andar" />
+          <ScalarProperty Name="C_Imovel_Condominio_Andares" ColumnName="_Imovel_Condominio_Andares" />
+          <ScalarProperty Name="C_Imovel_Condominio_Andar" ColumnName="_Imovel_Condominio_Andar" />
+          <ScalarProperty Name="C_Imovel_Condominio_Valor" ColumnName="_Imovel_Condominio_Valor" />
+          <ScalarProperty Name="C_Imovel_Area_Util" ColumnName="_Imovel_Area_Util" />
+          <ScalarProperty Name="C_Imovel_Area_Terreno" ColumnName="_Imovel_Area_Terreno" />
+          <ScalarProperty Name="C_Imovel_IPTU" ColumnName="_Imovel_IPTU" />
+          <ScalarProperty Name="C_Imovel_Idade" ColumnName="_Imovel_Idade" />
+          <ScalarProperty Name="C_Imovel_Vagas_Garagem" ColumnName="_Imovel_Vagas_Garagem" />
+          <ScalarProperty Name="C_Imovel_Suites" ColumnName="_Imovel_Suites" />
+          <ScalarProperty Name="C_Imovel_Quartos" ColumnName="_Imovel_Quartos" />
+          <ScalarProperty Name="C_Veiculo_Acessorios" ColumnName="_Veiculo_Acessorios" />
+          <ScalarProperty Name="C_Veiculo_Km" ColumnName="_Veiculo_Km" />
+          <ScalarProperty Name="C_Veiculo_Combustivel_ID" ColumnName="_Veiculo_Combustivel_ID" />
+          <ScalarProperty Name="C_Veiculo_Ano_Modelo" ColumnName="_Veiculo_Ano_Modelo" />
+          <ScalarProperty Name="C_Veiculo_Ano_Fabricacao" ColumnName="_Veiculo_Ano_Fabricacao" />
+          <ScalarProperty Name="C_Veiculo_Cor_ID" ColumnName="_Veiculo_Cor_ID" />
+          <ScalarProperty Name="C_Localizacao_Longitude" ColumnName="_Localizacao_Longitude" />
+          <ScalarProperty Name="C_Localizacao_Latitude" ColumnName="_Localizacao_Latitude" />
+          <ScalarProperty Name="C_Quantidade" ColumnName="_Quantidade" />
+          <ScalarProperty Name="C_Disponibilidade" ColumnName="_Disponibilidade" />
+          <ScalarProperty Name="C_Garantia" ColumnName="_Garantia" />
+          <ScalarProperty Name="C_Cor" ColumnName="_Cor" />
+          <ScalarProperty Name="C_Tamanho" ColumnName="_Tamanho" />
+          <ScalarProperty Name="UsuarioExc_ID" ColumnName="UsuarioExc_ID" />
+          <ScalarProperty Name="Ofertas" ColumnName="Ofertas" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="NomeArquivoFotoPrincipal" ColumnName="NomeArquivoFotoPrincipal" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Visitas" ColumnName="Visitas" />
+          <ScalarProperty Name="DataUpd" ColumnName="DataUpd" />
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="UsuarioUpd_ID" ColumnName="UsuarioUpd_ID" />
+          <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+          <ScalarProperty Name="DataExp" ColumnName="DataExp" />
+          <ScalarProperty Name="Categoria_ID" ColumnName="Categoria_ID" />
+          <ScalarProperty Name="AnuncioTipo_ID" ColumnName="AnuncioTipo_ID" />
+          <ScalarProperty Name="AnuncioConservacao_ID" ColumnName="AnuncioConservacao_ID" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="SubTitulo" ColumnName="SubTitulo" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnuncioFoto">
+      <EntityTypeMapping TypeName="MVC.Models.AnuncioFoto">
+        <MappingFragment StoreEntitySet="AnuncioFoto">
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="NomeArquivo" ColumnName="NomeArquivo" />
+          <ScalarProperty Name="Anuncio_ID" ColumnName="Anuncio_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnuncioOferta">
+      <EntityTypeMapping TypeName="MVC.Models.AnuncioOferta">
+        <MappingFragment StoreEntitySet="AnuncioOferta">
+          <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="AnuncioOfertaStatus_ID" ColumnName="AnuncioOfertaStatus_ID" />
+          <ScalarProperty Name="OfertaValor" ColumnName="OfertaValor" />
+          <ScalarProperty Name="OfertaDescricao" ColumnName="OfertaDescricao" />
+          <ScalarProperty Name="Anuncio_ID" ColumnName="Anuncio_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnuncioOfertaAnuncio">
+      <EntityTypeMapping TypeName="MVC.Models.AnuncioOfertaAnuncio">
+        <MappingFragment StoreEntitySet="AnuncioOfertaAnuncio">
+          <ScalarProperty Name="Anuncio_ID" ColumnName="Anuncio_ID" />
+          <ScalarProperty Name="AnuncioOferta_ID" ColumnName="AnuncioOferta_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnuncioPergunta">
+      <EntityTypeMapping TypeName="MVC.Models.AnuncioPergunta">
+        <MappingFragment StoreEntitySet="AnuncioPergunta">
+          <ScalarProperty Name="Privada" ColumnName="Privada" />
+          <ScalarProperty Name="RankResposta" ColumnName="RankResposta" />
+          <ScalarProperty Name="DataUpd" ColumnName="DataUpd" />
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="IdUsuarioUpd" ColumnName="IdUsuarioUpd" />
+          <ScalarProperty Name="IdUsuarioInc" ColumnName="IdUsuarioInc" />
+          <ScalarProperty Name="Resposta" ColumnName="Resposta" />
+          <ScalarProperty Name="Pergunta" ColumnName="Pergunta" />
+          <ScalarProperty Name="IdAnuncioPerguntaFK" ColumnName="IdAnuncioPerguntaFK" />
+          <ScalarProperty Name="IdAnuncio" ColumnName="IdAnuncio" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Busca">
+      <EntityTypeMapping TypeName="MVC.Models.Busca">
+        <MappingFragment StoreEntitySet="Busca">
+          <ScalarProperty Name="UrlAtual" ColumnName="UrlAtual" />
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+          <ScalarProperty Name="Busca1" ColumnName="Busca" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="MVC.Models.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="CategoriasFilhas" ColumnName="CategoriasFilhas" />
+          <ScalarProperty Name="usaImovel_Garagem" ColumnName="usaImovel_Garagem" />
+          <ScalarProperty Name="usaImovel_Residencial" ColumnName="usaImovel_Residencial" />
+          <ScalarProperty Name="usaImovel_Lazer" ColumnName="usaImovel_Lazer" />
+          <ScalarProperty Name="usaImovel_Instalacoes" ColumnName="usaImovel_Instalacoes" />
+          <ScalarProperty Name="usaImovel_Condominio" ColumnName="usaImovel_Condominio" />
+          <ScalarProperty Name="usaImovel" ColumnName="usaImovel" />
+          <ScalarProperty Name="usaVeiculo" ColumnName="usaVeiculo" />
+          <ScalarProperty Name="usaLocalizacao" ColumnName="usaLocalizacao" />
+          <ScalarProperty Name="usaQuantidade" ColumnName="usaQuantidade" />
+          <ScalarProperty Name="usaDisponibilidade" ColumnName="usaDisponibilidade" />
+          <ScalarProperty Name="usaGarantia" ColumnName="usaGarantia" />
+          <ScalarProperty Name="usaCor" ColumnName="usaCor" />
+          <ScalarProperty Name="usaTamanho" ColumnName="usaTamanho" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Anunciavel" ColumnName="Anunciavel" />
+          <ScalarProperty Name="QuantidadeAnuncios" ColumnName="QuantidadeAnuncios" />
+          <ScalarProperty Name="CategoriaTipo_ID" ColumnName="CategoriaTipo_ID" />
+          <ScalarProperty Name="CategoriaFK_ID" ColumnName="CategoriaFK_ID" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Categoria1" ColumnName="Categoria" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriaTipo">
+      <EntityTypeMapping TypeName="MVC.Models.CategoriaTipo">
+        <MappingFragment StoreEntitySet="CategoriaTipo">
+          <ScalarProperty Name="CategoriaTipo1" ColumnName="CategoriaTipo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Denuncia">
+      <EntityTypeMapping TypeName="MVC.Models.Denuncia">
+        <MappingFragment StoreEntitySet="Denuncia">
+          <ScalarProperty Name="DenunciaStatus_ID" ColumnName="DenunciaStatus_ID" />
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+          <ScalarProperty Name="DenunciaClasse_ID" ColumnName="DenunciaClasse_ID" />
+          <ScalarProperty Name="DenunciaObjeto_ID" ColumnName="DenunciaObjeto_ID" />
+          <ScalarProperty Name="DenunciaTipo_ID" ColumnName="DenunciaTipo_ID" />
+          <ScalarProperty Name="Denuncia1" ColumnName="Denuncia" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailMarketing">
+      <EntityTypeMapping TypeName="MVC.Models.EmailMarketing">
+        <MappingFragment StoreEntitySet="EmailMarketing">
+          <ScalarProperty Name="QuantidadeEnvios" ColumnName="QuantidadeEnvios" />
+          <ScalarProperty Name="EmailMarketing1" ColumnName="EmailMarketing" />
+          <ScalarProperty Name="IdEmailMarketing" ColumnName="IdEmailMarketing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endereco">
+      <EntityTypeMapping TypeName="MVC.Models.Endereco">
+        <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="EnderecoCep_ID" ColumnName="EnderecoCep_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoBairro">
+      <EntityTypeMapping TypeName="MVC.Models.EnderecoBairro">
+        <MappingFragment StoreEntitySet="EnderecoBairro">
+          <ScalarProperty Name="EnderecoCidade_ID" ColumnName="EnderecoCidade_ID" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoCep">
+      <EntityTypeMapping TypeName="MVC.Models.EnderecoCep">
+        <MappingFragment StoreEntitySet="EnderecoCep">
+          <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+          <ScalarProperty Name="EnderecoLogradouroTipo_ID" ColumnName="EnderecoLogradouroTipo_ID" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="EnderecoBairro_ID" ColumnName="EnderecoBairro_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoCidade">
+      <EntityTypeMapping TypeName="MVC.Models.EnderecoCidade">
+        <MappingFragment StoreEntitySet="EnderecoCidade">
+          <ScalarProperty Name="EnderecoEstado_ID" ColumnName="EnderecoEstado_ID" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoEstado">
+      <EntityTypeMapping TypeName="MVC.Models.EnderecoEstado">
+        <MappingFragment StoreEntitySet="EnderecoEstado">
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoLogradouroTipo">
+      <EntityTypeMapping TypeName="MVC.Models.EnderecoLogradouroTipo">
+        <MappingFragment StoreEntitySet="EnderecoLogradouroTipo">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fidelidade">
+      <EntityTypeMapping TypeName="MVC.Models.Fidelidade">
+        <MappingFragment StoreEntitySet="Fidelidade">
+          <ScalarProperty Name="Cor" ColumnName="Cor" />
+          <ScalarProperty Name="Shop" ColumnName="Shop" />
+          <ScalarProperty Name="QuantidadeFotos" ColumnName="QuantidadeFotos" />
+          <ScalarProperty Name="Pontos" ColumnName="Pontos" />
+          <ScalarProperty Name="Fidelidade1" ColumnName="Fidelidade" />
+          <ScalarProperty Name="IdFidelidade" ColumnName="IdFidelidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessao">
+      <EntityTypeMapping TypeName="MVC.Models.Sessao">
+        <MappingFragment StoreEntitySet="Sessao">
+          <ScalarProperty Name="Checkpoints" ColumnName="Checkpoints" />
+          <ScalarProperty Name="DataHoraFim" ColumnName="DataHoraFim" />
+          <ScalarProperty Name="DataHoraInicio" ColumnName="DataHoraInicio" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sugestao">
+      <EntityTypeMapping TypeName="MVC.Models.Sugestao">
+        <MappingFragment StoreEntitySet="Sugestao">
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+          <ScalarProperty Name="Sugestao1" ColumnName="Sugestao" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MVC.Models.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="MVC.Models.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="LoginUltimoFalha" ColumnName="LoginUltimoFalha" />
+          <ScalarProperty Name="LoginUltimoSucesso" ColumnName="LoginUltimoSucesso" />
+          <ScalarProperty Name="LoginQuantidadeSucessivaFalha" ColumnName="LoginQuantidadeSucessivaFalha" />
+          <ScalarProperty Name="LoginQuantidadeSucessivaSucesso" ColumnName="LoginQuantidadeSucessivaSucesso" />
+          <ScalarProperty Name="LoginQuantidadeTotalFalha" ColumnName="LoginQuantidadeTotalFalha" />
+          <ScalarProperty Name="LoginQuantidadeTotalSucesso" ColumnName="LoginQuantidadeTotalSucesso" />
+          <ScalarProperty Name="NomeArquivoFotoPrincipal" ColumnName="NomeArquivoFotoPrincipal" />
+          <ScalarProperty Name="UsuarioIndicou_ID" ColumnName="UsuarioIndicou_ID" />
+          <ScalarProperty Name="ReceberEmails" ColumnName="ReceberEmails" />
+          <ScalarProperty Name="ManterConectado" ColumnName="ManterConectado" />
+          <ScalarProperty Name="AnunciosPorPagina" ColumnName="AnunciosPorPagina" />
+          <ScalarProperty Name="Linguagem" ColumnName="Linguagem" />
+          <ScalarProperty Name="QualificacaoNeutra" ColumnName="QualificacaoNeutra" />
+          <ScalarProperty Name="QualificacaoNegativa" ColumnName="QualificacaoNegativa" />
+          <ScalarProperty Name="QualificacaoPositiva" ColumnName="QualificacaoPositiva" />
+          <ScalarProperty Name="Endereco_ID" ColumnName="Endereco_ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+          <ScalarProperty Name="Administrador" ColumnName="Administrador" />
+          <ScalarProperty Name="DataUpd" ColumnName="DataUpd" />
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="UsuarioUpd_ID" ColumnName="UsuarioUpd_ID" />
+          <ScalarProperty Name="UsuarioInc_ID" ColumnName="UsuarioInc_ID" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Sobrenome" ColumnName="Sobrenome" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioAnuncioFavorito">
+      <EntityTypeMapping TypeName="MVC.Models.UsuarioAnuncioFavorito">
+        <MappingFragment StoreEntitySet="UsuarioAnuncioFavorito">
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="IdAnuncio" ColumnName="IdAnuncio" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioContato">
+      <EntityTypeMapping TypeName="MVC.Models.UsuarioContato">
+        <MappingFragment StoreEntitySet="UsuarioContato">
+          <ScalarProperty Name="Publico" ColumnName="Publico" />
+          <ScalarProperty Name="UsuarioContato1" ColumnName="UsuarioContato" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="UsuarioContatoTipo_ID" ColumnName="UsuarioContatoTipo_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioContatoTipo">
+      <EntityTypeMapping TypeName="MVC.Models.UsuarioContatoTipo">
+        <MappingFragment StoreEntitySet="UsuarioContatoTipo">
+          <ScalarProperty Name="UsuarioContatoTipo1" ColumnName="UsuarioContatoTipo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioFoto">
+      <EntityTypeMapping TypeName="MVC.Models.UsuarioFoto">
+        <MappingFragment StoreEntitySet="UsuarioFoto">
+          <ScalarProperty Name="DataInc" ColumnName="DataInc" />
+          <ScalarProperty Name="NomeArquivo" ColumnName="NomeArquivo" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwTagCloud">
+      <EntityTypeMapping TypeName="MVC.Models.vwTagCloud">
+        <MappingFragment StoreEntitySet="vwTagCloud">
+          <ScalarProperty Name="Busca" ColumnName="Busca" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="stpCategoriaLinksUpd" FunctionName="muambbasqlModel.Store.stpCategoriaLinksUpd" />
+    <FunctionImportMapping FunctionImportName="stpCategoriasFilhasUpd" FunctionName="muambbasqlModel.Store.stpCategoriasFilhasUpd" />
+  </EntityContainerMapping>
+</Mapping>

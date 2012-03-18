@@ -1,0 +1,114 @@
+﻿
+.jcarousel-skin-anuncio-lista .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+
+.jcarousel-skin-anuncio-lista .jcarousel-container-vertical {
+    width: 125px;
+    height: 100px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-clip-vertical {
+    width:  100px;
+    height: 100px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-item {
+    width: 90px;
+    height: 90px;
+}
+
+
+.jcarousel-skin-anuncio-lista .jcarousel-item-vertical {
+    margin: 5px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+
+/**
+ *  Vertical Buttons
+ */
+ .anuncio-lista:hover .jcarousel-skin-anuncio-lista .jcarousel-next-vertical {
+    
+    display:block;
+}
+ 
+.jcarousel-skin-anuncio-lista .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display:none;
+    background-attachment:scroll;
+    background-color:transparent;
+    background-image:url('/Imagens/m.png');
+    background-repeat:repeat-x;
+    
+    background-position: -80px -181px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-next-vertical:hover,
+.jcarousel-skin-anuncio-lista .jcarousel-next-vertical:focus 
+{
+    
+    background-position: -144px -181px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-next-vertical:active {
+    background-position: -144px -181px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-next-disabled-vertical,
+.jcarousel-skin-anuncio-lista .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-anuncio-lista .jcarousel-next-disabled-vertical:focus,
+.jcarousel-skin-anuncio-lista .jcarousel-next-disabled-vertical:active {
+    cursor: default;
+    background-position: -112px -181px;
+}
+ .anuncio-lista:hover .jcarousel-skin-anuncio-lista .jcarousel-prev-vertical {
+    
+    display:block;
+}
+.jcarousel-skin-anuncio-lista .jcarousel-prev-vertical {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: none;
+    background-attachment:scroll;
+    background-color:transparent;
+    background-image:url('/Imagens/m.png');
+    background-repeat:repeat-x;
+    
+    background-position: -96px -181px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-prev-vertical:hover,
+.jcarousel-skin-anuncio-lista .jcarousel-prev-vertical:focus {
+    background-position: -160px -181px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-prev-vertical:active {
+    background-position: -160px -181px;
+}
+
+.jcarousel-skin-anuncio-lista .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-anuncio-lista .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-anuncio-lista .jcarousel-prev-disabled-vertical:focus,
+.jcarousel-skin-anuncio-lista .jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    background-position: -128px -181px;
+}

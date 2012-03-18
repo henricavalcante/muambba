@@ -1,0 +1,104 @@
+﻿body  
+{
+    margin:50px; 
+    background-color:White; 
+    font-family:"Lucida Sans Unicode", Arial; 
+}
+
+#Geral  
+{
+    width:1000px; 
+    margin-left:auto; 
+    margin-right:auto; 
+}
+
+#Cabecalho  
+{
+    width:100%; 
+    height:200px; 
+    font-size:130%; 
+    color:Black; 
+    font-weight:bold; 
+    text-align:center; 
+    line-height:200px; 
+    border:1px solid #000; 
+}
+
+#CorpoGeral
+{
+    width:100%;
+    height: 400px;
+}
+
+#Menu
+{
+    width:200px;
+    float:left;
+    height:400px;
+    line-height:400px;
+    font-size:130%; 
+    color:Black; 
+    font-weight:bold;
+    border:1px solid #000;
+    text-align:center;
+}
+
+#Conteudo
+{
+    width:500px;
+    height:400px;
+    text-align:center;
+    line-height:400px;
+    float:left;
+    font-size:130%; 
+    color:Black; 
+    font-weight:bold;
+    border:1px solid #000;
+}
+
+#Tweets
+{
+    width:294px;
+    height:400px;
+    float:right;
+    text-align:left;
+    border:1px solid #000;
+    overflow:scroll;
+}
+
+#Rodape
+{
+    width:100%;
+    height:100px;
+    text-align:center;
+    line-height:100px;
+    font-size:130%; 
+    color:Black; 
+    font-weight:bold;
+    border:1px solid #000;
+}
+
+.LinkDataTwitts:link  
+{
+    color:#006f92; 
+    font-weight:bold; 
+    text-decoration:none; 
+}
+.LinkDataTwitts:hover  
+{
+    color:#006f92; 
+    font-weight:bold; 
+    text-decoration:underline; 
+}
+.LinkDataTwitts:active  
+{
+    color:#006f92; 
+    font-weight:bold; 
+    text-decoration:underline; 
+}
+.LinkDataTwitts:visited  
+{
+    color:#006f92; 
+    font-weight:bold; 
+    text-decoration:none; 
+}

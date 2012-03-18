@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="hm">
+</Property><Property Name="Solution File" Value="C:\muambba\muambba\hm.sln">
+</Property><Property Name="Date" Value="terça-feira, 14 de setembro de 2010">
+</Property><Property Name="Time" Value="22:33">
+</Property></Properties><Event ErrorLevel="1" Project="ConnectionFramework" Source="ConnectionFramework\ConnectionFramework.vbproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="ConnectionFramework" Source="ConnectionFramework\ConnectionFramework.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ConnectionFramework" Source="ConnectionFramework\ConnectionFramework.vbproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="ApplicationBlocks" Source="ApplicationBlocks\ApplicationBlocks.vbproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="ApplicationBlocks" Source="ApplicationBlocks\ApplicationBlocks.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ApplicationBlocks" Source="ApplicationBlocks\ApplicationBlocks.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="hm.framework" Source="hm.framework\hm.framework.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.framework" Source="hm.framework\hm.framework.vbproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="hm.muambba.DAL" Source="hm.muambba.DAL\hm.muambba.DAL.vbproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="hm.muambba.DAL" Source="hm.muambba.DAL\hm.muambba.DAL.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.muambba.DAL" Source="hm.muambba.DAL\hm.muambba.DAL.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="hm.muambba.SITE35" Source="hm.muambba.SITE35\hm.muambba.SITE35.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.muambba.SITE35" Source="hm.muambba.SITE35\hm.muambba.SITE35.vbproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="hm.muambba.BLL" Source="hm.muambba.BLL\hm.muambba.BLL.vbproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="hm.muambba.BLL" Source="hm.muambba.BLL\hm.muambba.BLL.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.muambba.BLL" Source="hm.muambba.BLL\hm.muambba.BLL.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="hm.tacomtudo.SITE" Source="hm.tacomtudo.SITE\hm.tacomtudo.SITE.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.tacomtudo.SITE" Source="hm.tacomtudo.SITE\hm.tacomtudo.SITE.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="hm.rt2.SITE" Source="hm.rt2.SITE\hm.rt2.SITE.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.rt2.SITE" Source="hm.rt2.SITE\hm.rt2.SITE.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="hm.henrimichel.SITE" Source="hm.henrimichel.SITE\hm.henrimichel.SITE.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.henrimichel.SITE" Source="hm.henrimichel.SITE\hm.henrimichel.SITE.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="hm.henrimichel.DAL" Source="hm.henrimichel.DAL\hm.henrimichel.DAL.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="hm.henrimichel.DAL" Source="hm.henrimichel.DAL\hm.henrimichel.DAL.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="hm.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="hm.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ConnectionFramework" Source="ConnectionFramework\ConnectionFramework.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="ApplicationBlocks" Source="ApplicationBlocks\ApplicationBlocks.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.framework" Source="hm.framework\hm.framework.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.muambba.DAL" Source="hm.muambba.DAL\hm.muambba.DAL.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.muambba.SITE35" Source="hm.muambba.SITE35\hm.muambba.SITE35.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.muambba.BLL" Source="hm.muambba.BLL\hm.muambba.BLL.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.tacomtudo.SITE" Source="hm.tacomtudo.SITE\hm.tacomtudo.SITE.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.rt2.SITE" Source="hm.rt2.SITE\hm.rt2.SITE.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.henrimichel.SITE" Source="hm.henrimichel.SITE\hm.henrimichel.SITE.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="hm.henrimichel.DAL" Source="hm.henrimichel.DAL\hm.henrimichel.DAL.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

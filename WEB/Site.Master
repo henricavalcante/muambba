@@ -1,0 +1,226 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WEB.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>muambba.com.br - Seu portal de Compras, Vendas e Trocas</title>
+
+    <script src="jquery-1.2.6.min.js" type="text/javascript"></script>
+    <script src="jquery.tinysort.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <meta name="google-site-verification" content="z41H3PrnqY4tk8DE_JkhtvLCYC13GpCZ7wUmMCZPy3c" />
+
+    <script src="global.js" type="text/javascript"></script>
+
+    <script src="meiomask.js" type="text/javascript"></script>
+    
+    <script src="util.js" type="text/javascript"></script>
+    <link href="geral.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+
+    <center>
+        
+    <form id="form1" runat="server">
+<asp:ScriptManager ID="SMGeral" runat="server">
+        </asp:ScriptManager>        
+    
+    <div id="geral">
+    
+        <div id="topo">
+                <div id="topo_logo">
+                    <a href="default.aspx"><img alt="muambba.com.br" src="img/pixel.gif" class="master logo"/></a></div>
+                <div id="topo_links">
+                    <asp:HyperLink ID="lnkAjuda" runat="server" CssClass="lbl" 
+                        NavigateUrl="~/ajuda.aspx">Ajuda</asp:HyperLink>
+                    |                
+                    <asp:HyperLink ID="lnkCadastrar" runat="server" CssClass="lbl" 
+                        NavigateUrl="~/cadastrar.aspx">Cadastre-se</asp:HyperLink>
+                    |               
+                    <asp:HyperLink ID="lnkEntrar" runat="server" CssClass="lbl" 
+                        NavigateUrl="javascript:MostrarLogin();">Entrar</asp:HyperLink>
+                </div>
+                <div id="topo_pesquisa_anuncie">
+                    <div  id="topo_pesquisa" class="inline_block">
+                     
+                        <div id="topo_pesquisa_txt">
+                            <asp:TextBox ID="txtPesquisa" runat="server" CssClass="txt pesquisa" 
+                                            AutoCompleteType="Search" Width="100%" onfocus="javascript: if(this.value == 'O que você está procurando?'){this.value = ''};"  onblur="javascript: if(this.value == ''){this.value = 'O que você está procurando?'};" Text="O que você está procurando?"></asp:TextBox>
+                                        
+                        </div>
+                        <div id="topo_pesquisa_btn">
+                            <asp:ImageButton ID="imbPesquisa" runat="server" ImageUrl="img/pixel.gif" 
+                                cssclass="master busca" onclick="imbPesquisa_Click1"/>
+               
+                        </div>
+                    </div>
+                    
+                    <div id="topo_anuncie" class="inline_block">
+                        ou&nbsp;<button  type="button" id="btnAnunciar" value="Content" class="btn" runat="server"  title="Adicionar Anuncio aos Favoritos">
+                                <span class="btn-conteudo">Anuncie Grátis</span><img src="img/pixel.gif" class="master anunciar" alt="Anunciar"/>
+                            </button>
+                            
+                    </div>                
+                </div> 
+                <div id="topo_bemvindo" class="ClearBoth">
+                            <asp:Label ID="lblUsuario" runat="server" CssClass="lbl bold verde" Text="Bem Vindo"></asp:Label>
+                </div>
+                <div id="topo_data">
+                        <asp:Label ID="lblData" runat="server" CssClass="lbl bold verde" Text="Data"></asp:Label>
+                </div>
+            
+                
+        </div>
+    
+        
+        <div id="corpo">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <div id="login">
+            
+            <asp:TextBox ID="txtUsuario" runat="server" onfocus="javascript: if(this.value == 'Login:'){this.value = ''};"  onchange="javascript: if(this.value == ''){this.value = 'Login:'};" CssClass="txt" text="Login:" Width="180px"></asp:TextBox>
+
+            <br />
+
+            <asp:TextBox ID="txtSenha" runat="server" Enabled="false" CssClass="txt" 
+                AutoPostBack="True" Width="180px"></asp:TextBox>
+           
+            <asp:TextBox ID="txtArr" runat="server" AutoPostBack="True" style="display:none;" ontextchanged="txtArr_TextChanged1" ></asp:TextBox>
+           
+            <br />
+           
+            <asp:Button ID="btnSenha1" runat="server" Text="0  0" CssClass="btn"/>
+            <asp:Button ID="btnSenha2" runat="server" Text="0  0" CssClass="btn"/>
+            <asp:Button ID="btnSenha3" runat="server" Text="0  0" CssClass="btn"/>
+            <asp:Button ID="btnSenha4" runat="server" Text="0  0" CssClass="btn"/>
+            <asp:Button ID="btnSenha5" runat="server" Text="0  0" CssClass="btn"/>
+            <br />
+            <center>
+            <a href='javascript:MostrarLembrarSenha();' class="lbl bold t10" >[Lembrar Senha]</a>
+            
+            <a class="lbl bold t10" href="javascript:OcultarLogin();">[Fechar]</a>
+            
+            </center>
+            
+        </div>
+        <div id="LembrarSenha">
+            
+            <asp:TextBox ID="txtLembrarSenhaEmail" runat="server" onfocus="javascript: if(this.value == 'Digite seu E-mail.'){this.value = ''};"  onchange="javascript: if(this.value == ''){this.value = 'Digite seu E-mail.'};" CssClass="txt" text="Digite seu E-mail." Width="180px"></asp:TextBox>
+            <asp:Button ID="btnLembrarSenha" runat="server" Text="Enviar" CssClass="btn" 
+                onclick="btnLembrarSenha_Click1"/>
+            <a class="lbl bold t10" href="javascript:OcultarLembrarSenha();">[Fechar]</a>
+        </div>
+      </div>
+    <div class="ClearBoth"></div>
+        <div id="footer">
+            <asp:Label ID="lblFooter" runat="server" CssClass="lbl bold branco" 
+                Text="muambba.com.br - 2010 - Henri Michel - (84) 8803-9974 - Versão: "></asp:Label>
+            <asp:Label ID="lblVersao" runat="server" CssClass="lbl bold branco" Text="00"></asp:Label>
+            <div class="lbl branco">Não nos responsabilizamos pelos anuncios publicados neste website, os mesmos são de inteira responsabilidade dos anunciantes.</div>
+        </div>
+        
+    </form>
+      
+        <div id="mask" style="width: 1px; height: 1px; display: none; opacity: 0.8;"></div>
+    
+    </center>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17730004-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+
+
+
+            var arr = new Array();
+            var arrAux = new Array();
+
+            function btn01() {
+                AddNumeros('<%= btnSenha1.Text.Substring(0, 1) %>', '<%= btnSenha1.Text.Substring(3, 1) %>')
+            }
+            function btn02() {
+                AddNumeros('<%= btnSenha2.Text.Substring(0, 1) %>', '<%= btnSenha2.Text.Substring(3, 1) %>')
+            }
+            function btn03() {
+                AddNumeros('<%= btnSenha3.Text.Substring(0, 1) %>', '<%= btnSenha3.Text.Substring(3, 1) %>')
+            }
+            function btn04() {
+                AddNumeros('<%= btnSenha4.Text.Substring(0, 1) %>', '<%= btnSenha4.Text.Substring(3, 1) %>')
+            }
+            function btn05() {
+                AddNumeros('<%= btnSenha5.Text.Substring(0, 1) %>', '<%= btnSenha5.Text.Substring(3, 1) %>')
+            }
+
+            function AddNumeros(Valor1, Valor2) {
+
+                if (arr.length == 0) {
+                    arr.push(Valor1);
+                    arr.push(Valor2);
+                } else {
+                    arrAux = arr;
+                    arr = new Array();
+                    for (i = 0; i <= arrAux.length - 1; i++) {
+                        arr.push(arrAux[i] + Valor1);
+                        arr.push(arrAux[i] + Valor2);
+                    }
+                }
+                document.getElementById('<%= txtSenha.ClientID %>').value = document.getElementById('<%= txtSenha.ClientID %>').value + '*';
+
+                if (arr.length >= 64) {
+                    Validar();
+                }
+
+            }
+
+            function Validar() {
+                document.getElementById('<%= txtArr.ClientID %>').value = arr.toString();
+                
+                setTimeout('__doPostBack(\'ctl00$txtArr\',\'\')', 0)
+            }
+
+            function OcultarLogin() {
+                $('#LembrarSenha').slideUp();
+                $('#login').slideUp();
+                $('#mask').fadeOut();
+
+            }
+            function MostrarLogin() {
+
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+
+                $('#mask').css({ 'width': maskWidth, 'height': maskHeight });
+
+                $('#mask').fadeIn(1000);
+                $('#mask').fadeTo("slow", 0.8);
+
+                $('#login').slideDown();
+
+            }
+            function OcultarLembrarSenha() {
+                $('#LembrarSenha').slideUp();
+
+            }
+            function MostrarLembrarSenha() {
+
+                $('#LembrarSenha').slideDown();
+
+            }
+
+        </script>
+
+    </body>
+</html>

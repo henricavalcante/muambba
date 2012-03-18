@@ -1,0 +1,12 @@
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\BLL.dll.config
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\BLL.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\BLL.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\Modelo.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\Repositorio.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\Util.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\Modelo.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\Repositorio.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\bin\Debug\Util.pdb
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\obj\Debug\BLL.dll
+C:\Users\henri\Desktop\Projetos SVN LOCAL\muambba\BLL\obj\Debug\BLL.pdb

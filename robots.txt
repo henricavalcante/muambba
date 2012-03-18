@@ -1,0 +1,21 @@
+User-Agent: *
+Allow: /
+
+User-Agent: GoogleBot
+Allow: /
+
+User-Agent: Slurp
+Allow: /
+
+User-Agent: msnbot
+Allow: /
+
+User-Agent: Googlebot-Image
+Allow: /
+
+User-Agent: yahoo-mmcrawler
+Allow: /
+
+User-Agent: psbot
+Allow: /
+

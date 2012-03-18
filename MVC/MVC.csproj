@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{883C9E1E-10F1-4B37-8E9D-E66E6445057A}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVC</RootNamespace>
+    <AssemblyName>MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Twitterizer2">
+      <HintPath>.\Twitterizer2.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>.\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AjaxController.cs" />
+    <Compile Include="Controllers\AnuncianteController.cs" />
+    <Compile Include="Controllers\AnunciarController.cs" />
+    <Compile Include="Controllers\AnuncioController.cs" />
+    <Compile Include="Controllers\BuscarController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ContatoController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\CSSController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JavaScriptController.cs" />
+    <Compile Include="Controllers\JSONController.cs" />
+    <Compile Include="Controllers\MeuMuambbaController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleClosure.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ucAnuncioListaLinhaParam.cs" />
+    <Compile Include="Models\ucAnuncioListaPadraoParam.cs" />
+    <Compile Include="Models\ucAnuncioOfertaListaPadraoParam.cs" />
+    <Compile Include="Models\ucPaginacaoOrdenacaoFiltrosParam.cs" />
+    <Compile Include="Models\ucPerguntasRespostasParam.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\c%24a%24fileuploader.css" />
+    <Content Include="Content\f%24a%24jquery.jqzoom.css" />
+    <Content Include="Content\ie6.css" />
+    <Content Include="Content\e%24a%24jquery.autocomplete.css" />
+    <Content Include="Content\d%24a%24jquery.jcarousel-anuncio-lista.css" />
+    <Content Include="Content\jquery.popeye.css" />
+    <Content Include="Content\a%24b%24jScrollPane.css" />
+    <Content Include="Content\jScrollPaneH.css" />
+    <Content Include="Content\thickbox.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagens\aba-superior_direita.gif" />
+    <Content Include="Imagens\aba-superior_direita_dis.gif" />
+    <Content Include="Imagens\aba-superior_esquerda.gif" />
+    <Content Include="Imagens\aba-superior_esquerda_dis.gif" />
+    <Content Include="Imagens\aba-superior_fundo.gif" />
+    <Content Include="Imagens\ajax_load.gif" />
+    <Content Include="Imagens\arrow.gif" />
+    <Content Include="Imagens\arrow_down.png" />
+    <Content Include="Imagens\bestsellers.png" />
+    <Content Include="Imagens\bg.png" />
+    <Content Include="Imagens\box_bottom.png" />
+    <Content Include="Imagens\box_top.png" />
+    <Content Include="Imagens\brands.png" />
+    <Content Include="Imagens\bullet_1.png" />
+    <Content Include="Imagens\bullet_2.png" />
+    <Content Include="Imagens\button_add_small.png" />
+    <Content Include="Imagens\button_left.gif" />
+    <Content Include="Imagens\button_left.png" />
+    <Content Include="Imagens\button_right.gif" />
+    <Content Include="Imagens\button_right.png" />
+    <Content Include="Imagens\c16.gif" />
+    <Content Include="Imagens\c24.gif" />
+    <Content Include="Imagens\c48.gif" />
+    <Content Include="Imagens\container-bg.png" />
+    <Content Include="Imagens\container-bg1.png" />
+    <Content Include="Imagens\content_bottom_center.png" />
+    <Content Include="Imagens\content_bottom_left.png" />
+    <Content Include="Imagens\content_bottom_right.png" />
+    <Content Include="Imagens\content_top_center.png" />
+    <Content Include="Imagens\content_top_left.png" />
+    <Content Include="Imagens\content_top_right.png" />
+    <Content Include="Imagens\discount.png" />
+    <Content Include="Imagens\featured.png" />
+    <Content Include="Imagens\header_1_center.png" />
+    <Content Include="Imagens\header_1_left.png" />
+    <Content Include="Imagens\header_1_right.png" />
+    <Content Include="Imagens\header_2_center.png" />
+    <Content Include="Imagens\header_2_left.png" />
+    <Content Include="Imagens\header_2_right.png" />
+    <Content Include="Imagens\information.png" />
+    <Content Include="Imagens\latest.png" />
+    <Content Include="Imagens\list_remove_btn.gif" />
+    <Content Include="Imagens\loading_1.gif" />
+    <Content Include="Imagens\logo.png" />
+    <Content Include="Imagens\m.png" />
+    <Content Include="Imagens\m2.png" />
+    <Content Include="Imagens\menu-bg.png" />
+    <Content Include="Imagens\px.gif" />
+    <Content Include="Imagens\sem_foto.png" />
+    <Content Include="Imagens\special.png" />
+    <Content Include="Imagens\switcher.png" />
+    <Content Include="Imagens\tab_1.png" />
+    <Content Include="Imagens\tab_2.png" />
+    <Content Include="Imagens\tab_3.png" />
+    <Content Include="Scripts\a%24b%24jquery.ajaxqueue.js" />
+    <Content Include="Scripts\ajax_add.js" />
+    <Content Include="Scripts\a%24h%24core.js" />
+    <Content Include="Scripts\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="Scripts\c%24a%24fileuploader.js" />
+    <Content Include="Scripts\f%24a%24jquery.jqzoom-core.js" />
+    <Content Include="Scripts\funcoes_sem_uso.js" />
+    <Content Include="Scripts\e%24a%24jquery.autocomplete.js" />
+    <Content Include="Scripts\jquery.em.js" />
+    <Content Include="Scripts\d%24a%24jquery.jcarousel.js" />
+    <Content Include="Scripts\a%24i%24jquery.mousewheel.js" />
+    <Content Include="Scripts\jquery.popeye-2.0.4.min.js" />
+    <Content Include="Scripts\a%24j%24jScrollPane.js" />
+    <Content Include="Scripts\a%24k%24jScrollPaneH.js" />
+    <Content Include="Scripts\a%24c%24json.js" />
+    <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\a%24g%24plugin-timer.js" />
+    <Content Include="Scripts\a%24f%24plugin_jquery_meiomask.js" />
+    <Content Include="Scripts\a%24e%24tab.js" />
+    <Content Include="Scripts\thickbox-compressed.js" />
+    <Content Include="Scripts\a%24d%24tsort.js" />
+    <Content Include="Views\Ajax\RetornoPadrao.aspx" />
+    <Content Include="Views\Anunciante\Index.aspx" />
+    <Content Include="Views\Anunciar\Anunciar.aspx" />
+    <Content Include="Views\Anuncio\Index.aspx" />
+    <Content Include="Views\Anunciar\NaoLogado.aspx" />
+    <Content Include="Views\Buscar\Index.aspx" />
+    <Content Include="Views\Categorias\Index.aspx" />
+    <Content Include="Views\Contato\Index.aspx" />
+    <Content Include="Views\Mail-Cadastro.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\JSON\RetornoPadrao.aspx" />
+    <Content Include="Views\Mail-Indicacao.ascx" />
+    <Content Include="Views\Mail-IndicacaoPremio.ascx" />
+    <Content Include="Views\Mail-SenhaRecuperacao.ascx" />
+    <Content Include="Views\MeuMuambba\Anuncios.aspx" />
+    <Content Include="Views\MeuMuambba\MeusDados.aspx" />
+    <Content Include="Views\MeuMuambba\NaoLogado.aspx" />
+    <Content Include="Views\MeuMuambba\Ofertas.aspx" />
+    <Content Include="Views\MeuMuambba\PerguntasRespostas.aspx" />
+    <Content Include="Views\MeuMuambba\Qualificacoes.aspx" />
+    <Content Include="Views\MeuMuambba\ucAbasSuperiores.ascx" />
+    <Content Include="Views\Shared\ucAnuncioListaLinha.ascx" />
+    <Content Include="Views\Shared\ucAnuncioListaPadrao.ascx" />
+    <Content Include="Views\Shared\ucAnuncioOfertaListaPadrao.ascx" />
+    <Content Include="Views\Shared\ucModalCadastrar.ascx" />
+    <Content Include="Views\Shared\ucModalLogin.ascx" />
+    <Content Include="Views\Shared\ucModalLoginCadastro.ascx" />
+    <Content Include="Views\Shared\ucModalOfertar.ascx" />
+    <Content Include="Views\Shared\ucModalDenunciar.ascx" />
+    <Content Include="Views\Shared\ucPaginacaoOrdenacaoFiltros.ascx" />
+    <Content Include="Views\Shared\ucPerguntasRespostas.ascx" />
+    <Content Include="Views\Usuario\Usuario.aspx" />
+    <Content Include="Views\Mail-AvisoPergunta.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Mail-AvisoResposta.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Mail-LoginIncorreto.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Mail-Master.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\a%24a%24Site.css" />
+    <Content Include="Scripts\a%24a%24jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Imagens\Anuncios\" />
+    <Folder Include="Imagens\Usuarios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{953AEC64-9D12-4738-A375-4AEC1446BCEE}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{3E61B091-3BDB-427A-BED9-6FD85E712CF0}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
+      <Project>{425D6B56-D9D1-4967-BC54-0664B2E03654}</Project>
+      <Name>Repositorio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{C3F017DA-2202-4DB1-9529-4828F561F088}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>28788</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8888/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
